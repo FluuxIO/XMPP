@@ -16,7 +16,7 @@ Fluux XMPP is a clean slate implementation, with the following goals in mind:
 3. Install [Carthage](https://github.com/Carthage/Carthage), if you do not already have the tool installed
 4. Create a `Cartfile` (or update your existing one) to include Fluux XMPP as a dependency:
    ```
-   git "git@github.com:FluuxIO/XMPP.git" ~> 0.0
+   github "FluuxIO/XMPP.git" ~> 0.0
    ```
 5. Download and build the Fluux XMPP dependency:
    ```bash
