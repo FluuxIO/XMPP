@@ -9,6 +9,10 @@ Fluux XMPP is a clean slate implementation, with the following goals in mind:
 - Focus on maintainability. XMPP is a complex protocol and maintainability should be the main criteria for design decision to be able to be sustainable in the long term.
 - Focus on efficiency and scalability, leveraging only part of the XMPP protocol that are scalable. Many XEPs are too consuming to be used on large scale on production.
 
+As a result, on iOS, we target iOS version 12+.
+
+*Note*: This library is under development and not yet ready for production.
+
 ## Using Fluux XMPP with Carthage
 
 1. Create your project as usual in XCode.
@@ -26,6 +30,37 @@ Fluux XMPP is a clean slate implementation, with the following goals in mind:
 6. Open your application workspace and add your dependency projects into your workspace. You can do so by dragging the bundle `Carthage/Checkouts/XMPP/XMPP.xcodeproj` to your workspace.
 7. In the *General* tab of your target, add Fluux XMPP as an embedded binary. Click `+` and select XMPP.framework for iOS.
 8. You should now be able to use the framework from your app. Here is an example of minimal code you can add to your app to to an XMPP client: [Fluux XMPP client example for Fluux XMPP v0.0.1](https://gist.github.com/mremond/319dd29f2c308cf807f199b812260f98)
+
+## Using Fluux XMPP with Cocoapods
+
+Fluux XMPP library is published on [Cocoapods](https://cocoapods.org/pods/XMPP).
+
+You can thus use it as follows:
+
+1. Close your project
+2. Create (or update) your `Podfile` to include `pod 'XMPP'`. For example:
+
+   ```ruby
+   platform :ios, '12.0'
+   
+   target 'XMPPPodTest' do
+     pod 'XMPP'
+   end
+   
+   post_install do |installer| 
+     installer.pods_project.build_configurations.each do |config|
+       if config.name == 'Release'
+         config.build_settings['SWIFT_COMPILATION_MODE'] = 'wholemodule'
+       end    
+     end
+   end
+   ```
+3. Install the dependencies:
+   ```bash
+   pod install
+   ```
+4. Open the workspace. You can now start using Fluux XMPP. Here is an example of minimal code you can add to your app to to an XMPP client:     [Fluux XMPP client example for Fluux XMPP v0.0.1](https://gist.github.com/mremond/319dd29f2c308cf807f199b812260f98).
+
 
 ## TLS support
 
