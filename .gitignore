@@ -1,0 +1,49 @@
+## OS X Finder
+.DS_Store
+
+## Build generated
+build/
+DerivedData
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+XMPP.xcodeproj/xcuserdata/*.xcuserdatad/
+
+## Other
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.build/
+
+# Carthage
+Carthage/Build
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Gitignore.md
+
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+Packages/
+

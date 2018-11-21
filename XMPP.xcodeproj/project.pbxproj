@@ -9,7 +9,31 @@
 /* Begin PBXBuildFile section */
 		0277680C21A56A400002BA32 /* XMPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0277680221A56A400002BA32 /* XMPP.framework */; };
 		0277681121A56A400002BA32 /* XMPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277681021A56A400002BA32 /* XMPPTests.swift */; };
-		0277681321A56A400002BA32 /* XMPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 0277680521A56A400002BA32 /* XMPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0277681E21A56B100002BA32 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0277681D21A56B100002BA32 /* libxml2.2.tbd */; };
+		0277682021A56E0B0002BA32 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277681F21A56E0B0002BA32 /* Auth.swift */; };
+		0277682A21A56E170002BA32 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277682221A56E170002BA32 /* Message.swift */; };
+		0277682B21A56E170002BA32 /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277682321A56E170002BA32 /* Encoder.swift */; };
+		0277682C21A56E170002BA32 /* IQEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277682421A56E170002BA32 /* IQEncoder.swift */; };
+		0277682D21A56E170002BA32 /* PresenceEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277682521A56E170002BA32 /* PresenceEncoder.swift */; };
+		0277682E21A56E170002BA32 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277682621A56E170002BA32 /* Config.swift */; };
+		0277682F21A56E170002BA32 /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277682721A56E170002BA32 /* Features.swift */; };
+		0277683021A56E170002BA32 /* MobileProvision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277682921A56E170002BA32 /* MobileProvision.swift */; };
+		0277683D21A56E260002BA32 /* XMPP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683121A56E260002BA32 /* XMPP.swift */; };
+		0277683E21A56E260002BA32 /* Stanza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683321A56E260002BA32 /* Stanza.swift */; };
+		0277683F21A56E260002BA32 /* SAX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683421A56E260002BA32 /* SAX.swift */; };
+		0277684021A56E260002BA32 /* XMLStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683521A56E260002BA32 /* XMLStream.swift */; };
+		0277684121A56E260002BA32 /* IQParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683621A56E260002BA32 /* IQParser.swift */; };
+		0277684221A56E260002BA32 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683721A56E260002BA32 /* Parser.swift */; };
+		0277684321A56E260002BA32 /* JID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683821A56E260002BA32 /* JID.swift */; };
+		0277684421A56E260002BA32 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683A21A56E260002BA32 /* Connection.swift */; };
+		0277684521A56E260002BA32 /* StreamObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683B21A56E260002BA32 /* StreamObserver.swift */; };
+		0277684621A56E260002BA32 /* ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683C21A56E260002BA32 /* ConnectionError.swift */; };
+		0277684A21A571900002BA32 /* MobileProvisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277684721A571900002BA32 /* MobileProvisionTests.swift */; };
+		0277684B21A571900002BA32 /* SerializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277684821A571900002BA32 /* SerializerTests.swift */; };
+		0277684C21A571900002BA32 /* IQEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277684921A571900002BA32 /* IQEncoderTests.swift */; };
+		0277685121A571F20002BA32 /* broken-mock.mobileprovision in Resources */ = {isa = PBXBuildFile; fileRef = 0277684E21A571F20002BA32 /* broken-mock.mobileprovision */; };
+		0277685221A571F20002BA32 /* dev-mock.mobileprovision in Resources */ = {isa = PBXBuildFile; fileRef = 0277684F21A571F20002BA32 /* dev-mock.mobileprovision */; };
+		0277685321A571F20002BA32 /* prod-mock.mobileprovision in Resources */ = {isa = PBXBuildFile; fileRef = 0277685021A571F20002BA32 /* prod-mock.mobileprovision */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +48,35 @@
 
 /* Begin PBXFileReference section */
 		0277680221A56A400002BA32 /* XMPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XMPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0277680521A56A400002BA32 /* XMPP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMPP.h; sourceTree = "<group>"; };
 		0277680621A56A400002BA32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0277680B21A56A400002BA32 /* XMPPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XMPPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0277681021A56A400002BA32 /* XMPPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMPPTests.swift; sourceTree = "<group>"; };
 		0277681221A56A400002BA32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0277681D21A56B100002BA32 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		0277681F21A56E0B0002BA32 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		0277682221A56E170002BA32 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		0277682321A56E170002BA32 /* Encoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
+		0277682421A56E170002BA32 /* IQEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQEncoder.swift; sourceTree = "<group>"; };
+		0277682521A56E170002BA32 /* PresenceEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenceEncoder.swift; sourceTree = "<group>"; };
+		0277682621A56E170002BA32 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		0277682721A56E170002BA32 /* Features.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
+		0277682921A56E170002BA32 /* MobileProvision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileProvision.swift; sourceTree = "<group>"; };
+		0277683121A56E260002BA32 /* XMPP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMPP.swift; sourceTree = "<group>"; };
+		0277683321A56E260002BA32 /* Stanza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stanza.swift; sourceTree = "<group>"; };
+		0277683421A56E260002BA32 /* SAX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAX.swift; sourceTree = "<group>"; };
+		0277683521A56E260002BA32 /* XMLStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLStream.swift; sourceTree = "<group>"; };
+		0277683621A56E260002BA32 /* IQParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQParser.swift; sourceTree = "<group>"; };
+		0277683721A56E260002BA32 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		0277683821A56E260002BA32 /* JID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JID.swift; sourceTree = "<group>"; };
+		0277683A21A56E260002BA32 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		0277683B21A56E260002BA32 /* StreamObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamObserver.swift; sourceTree = "<group>"; };
+		0277683C21A56E260002BA32 /* ConnectionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionError.swift; sourceTree = "<group>"; };
+		0277684721A571900002BA32 /* MobileProvisionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileProvisionTests.swift; sourceTree = "<group>"; };
+		0277684821A571900002BA32 /* SerializerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializerTests.swift; sourceTree = "<group>"; };
+		0277684921A571900002BA32 /* IQEncoderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQEncoderTests.swift; sourceTree = "<group>"; };
+		0277684E21A571F20002BA32 /* broken-mock.mobileprovision */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "broken-mock.mobileprovision"; sourceTree = "<group>"; };
+		0277684F21A571F20002BA32 /* dev-mock.mobileprovision */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "dev-mock.mobileprovision"; sourceTree = "<group>"; };
+		0277685021A571F20002BA32 /* prod-mock.mobileprovision */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "prod-mock.mobileprovision"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0277681E21A56B100002BA32 /* libxml2.2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +105,7 @@
 				0277680421A56A400002BA32 /* XMPP */,
 				0277680F21A56A400002BA32 /* XMPPTests */,
 				0277680321A56A400002BA32 /* Products */,
+				0277681C21A56B0F0002BA32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,8 +121,15 @@
 		0277680421A56A400002BA32 /* XMPP */ = {
 			isa = PBXGroup;
 			children = (
-				0277680521A56A400002BA32 /* XMPP.h */,
+				0277682821A56E170002BA32 /* Config */,
+				0277683921A56E260002BA32 /* Networking */,
+				0277683221A56E260002BA32 /* Parsing */,
+				0277682121A56E170002BA32 /* Encoding */,
 				0277680621A56A400002BA32 /* Info.plist */,
+				0277682721A56E170002BA32 /* Features.swift */,
+				0277681F21A56E0B0002BA32 /* Auth.swift */,
+				0277683821A56E260002BA32 /* JID.swift */,
+				0277683121A56E260002BA32 /* XMPP.swift */,
 			);
 			path = XMPP;
 			sourceTree = "<group>";
@@ -80,10 +137,74 @@
 		0277680F21A56A400002BA32 /* XMPPTests */ = {
 			isa = PBXGroup;
 			children = (
+				0277684D21A571F20002BA32 /* TestData */,
+				0277684821A571900002BA32 /* SerializerTests.swift */,
+				0277684921A571900002BA32 /* IQEncoderTests.swift */,
 				0277681021A56A400002BA32 /* XMPPTests.swift */,
+				0277684721A571900002BA32 /* MobileProvisionTests.swift */,
 				0277681221A56A400002BA32 /* Info.plist */,
 			);
 			path = XMPPTests;
+			sourceTree = "<group>";
+		};
+		0277681C21A56B0F0002BA32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0277681D21A56B100002BA32 /* libxml2.2.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0277682121A56E170002BA32 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				0277682221A56E170002BA32 /* Message.swift */,
+				0277682321A56E170002BA32 /* Encoder.swift */,
+				0277682421A56E170002BA32 /* IQEncoder.swift */,
+				0277682521A56E170002BA32 /* PresenceEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		0277682821A56E170002BA32 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				0277682621A56E170002BA32 /* Config.swift */,
+				0277682921A56E170002BA32 /* MobileProvision.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		0277683221A56E260002BA32 /* Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				0277683321A56E260002BA32 /* Stanza.swift */,
+				0277683421A56E260002BA32 /* SAX.swift */,
+				0277683521A56E260002BA32 /* XMLStream.swift */,
+				0277683621A56E260002BA32 /* IQParser.swift */,
+				0277683721A56E260002BA32 /* Parser.swift */,
+			);
+			path = Parsing;
+			sourceTree = "<group>";
+		};
+		0277683921A56E260002BA32 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0277683A21A56E260002BA32 /* Connection.swift */,
+				0277683B21A56E260002BA32 /* StreamObserver.swift */,
+				0277683C21A56E260002BA32 /* ConnectionError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		0277684D21A571F20002BA32 /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				0277684E21A571F20002BA32 /* broken-mock.mobileprovision */,
+				0277684F21A571F20002BA32 /* dev-mock.mobileprovision */,
+				0277685021A571F20002BA32 /* prod-mock.mobileprovision */,
+			);
+			path = TestData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,7 +214,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0277681321A56A400002BA32 /* XMPP.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +268,7 @@
 				TargetAttributes = {
 					0277680121A56A400002BA32 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					0277680A21A56A400002BA32 = {
 						CreatedOnToolsVersion = 10.1;
@@ -184,6 +305,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0277685121A571F20002BA32 /* broken-mock.mobileprovision in Resources */,
+				0277685321A571F20002BA32 /* prod-mock.mobileprovision in Resources */,
+				0277685221A571F20002BA32 /* dev-mock.mobileprovision in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +318,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0277684621A56E260002BA32 /* ConnectionError.swift in Sources */,
+				0277683F21A56E260002BA32 /* SAX.swift in Sources */,
+				0277684121A56E260002BA32 /* IQParser.swift in Sources */,
+				0277683E21A56E260002BA32 /* Stanza.swift in Sources */,
+				0277682D21A56E170002BA32 /* PresenceEncoder.swift in Sources */,
+				0277683021A56E170002BA32 /* MobileProvision.swift in Sources */,
+				0277684321A56E260002BA32 /* JID.swift in Sources */,
+				0277684521A56E260002BA32 /* StreamObserver.swift in Sources */,
+				0277682C21A56E170002BA32 /* IQEncoder.swift in Sources */,
+				0277684221A56E260002BA32 /* Parser.swift in Sources */,
+				0277682F21A56E170002BA32 /* Features.swift in Sources */,
+				0277683D21A56E260002BA32 /* XMPP.swift in Sources */,
+				0277682021A56E0B0002BA32 /* Auth.swift in Sources */,
+				0277684421A56E260002BA32 /* Connection.swift in Sources */,
+				0277682A21A56E170002BA32 /* Message.swift in Sources */,
+				0277682B21A56E170002BA32 /* Encoder.swift in Sources */,
+				0277682E21A56E170002BA32 /* Config.swift in Sources */,
+				0277684021A56E260002BA32 /* XMLStream.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +343,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0277684C21A571900002BA32 /* IQEncoderTests.swift in Sources */,
 				0277681121A56A400002BA32 /* XMPPTests.swift in Sources */,
+				0277684B21A571900002BA32 /* SerializerTests.swift in Sources */,
+				0277684A21A571900002BA32 /* MobileProvisionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +486,7 @@
 		0277681721A56A400002BA32 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -348,6 +494,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = XMPP/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +505,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "net.process-one.XMPP";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +514,7 @@
 		0277681821A56A400002BA32 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -373,6 +522,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = XMPP/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -391,6 +541,7 @@
 		0277681A21A56A400002BA32 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8L55BDM864;
 				INFOPLIST_FILE = XMPPTests/Info.plist;
@@ -409,6 +560,7 @@
 		0277681B21A56A400002BA32 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8L55BDM864;
 				INFOPLIST_FILE = XMPPTests/Info.plist;

@@ -2,7 +2,7 @@
 //  XMPPTests.swift
 //  XMPPTests
 //
-//  Created by Mickaël Rémond on 21/11/2018.
+//  Created by Mickaël Rémond on 07/10/2018.
 //  Copyright © 2018 ProcessOne. All rights reserved.
 //
 

@@ -1,0 +1,63 @@
+Extra Data ignore<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AppIDName</key>
+	<string>P1FrameworkDemo</string>
+	<key>ApplicationIdentifierPrefix</key>
+	<array>
+	<string>1A22BCE345</string>
+	</array>
+	<key>CreationDate</key>
+	<date>2015-09-14T08:53:30Z</date>
+	<key>Platform</key>
+	<array>
+		<string>iOS</string>
+	</array>
+	<key>DeveloperCertificates</key>
+	<array>
+		<data>MIIFmDCC=</data>
+		<data>MIIFmAAA=</data>
+	</array>
+	<key>Entitlements</key>
+	<dict>
+		<key>keychain-access-groups</key>
+		<array>
+			<string>1A22BCE345.*</string>		
+		</array>
+		<key>get-task-allow</key>
+		<false/>
+		<key>application-identifier</key>
+		<string>1A22BCE345.net.processone.framework.demo</string>
+		<key>com.apple.security.application-groups</key>
+		<array>
+			<string>group.processone.TodayExtensionSharingDefaults</string>
+		</array>
+		<key>com.apple.developer.team-identifier</key>
+		<string>1A22BCE345</string>
+		<key>aps-environment</key>
+		<string>production</string>
+
+	</dict>
+	<key>ExpirationDate</key>
+	<date>2016-09-13T08:43:02Z</date>
+	<key>Name</key>
+	<string>P1FrameworkDemoAdhoc</string>
+	<key>ProvisionedDevices</key>
+	<array>
+		<string>9d9dc4f58f261b350282b3278963c639fc2ad855</string>
+	</array>
+	<key>TeamIdentifier</key>
+	<array>
+		<string>1A22BCE345</string>
+	</array>
+	<key>TeamName</key>
+	<string>ProcessOne</string>
+	<key>TimeToLive</key>
+	<integer>364</integer>
+	<key>UUID</key>
+	<string>5f352c7f-d597-4c50-aac1-a24fa40242ce</string>
+	<key>Version</key>
+	<integer>1</integer>
+</dict>
+</plist>Extra data ignore
