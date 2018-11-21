@@ -1,14 +1,9 @@
 # TODO
 
-## For 0.0.1 release
-
-- Bootstrap the framework to make it usable from Carthage, Cocoapod or Git submodules
-- Publish in Cocoapods.
-- Test with Carthage.
-- Document code (Jazzy?).
-
 ## Backlog
 
+- MacOS support
+- Document code (Jazzy?).
 - Detect connection loss when not receiving the replies from the keep-alive
 - Detect p1:push support before sending p1:push configuration.
 - Ability to send an IQ, passing a block to process the IQ reply.
@@ -27,6 +22,8 @@
 
 # Done
 
+- Publish in Cocoapods / test using project from Carthage
+- Bootstrap the framework to make it usable from Carthage, Cocoapod or Git submodules
 - Observe incoming and outgoing Stream content to help with debugging. It could be used in a standalone XMPP console for iPad.
 - Keep-alive support
 - Basic support for p1:rebind
