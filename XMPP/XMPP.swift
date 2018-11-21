@@ -5,7 +5,11 @@
 
 import Foundation
 import Network
+
+// TODO: Move the dependency for iOS feature to a specific file.
+#if os(iOS)
 import UIKit
+#endif
 
 // XMPP is the XMPP client wrapper, managing the XMPP session, client workflow.
 // It serves as the interface between the client and the XMPP server.
@@ -123,12 +127,16 @@ public final class XMPP: ConnectionDelegate, StreamManagerDelegate {
             openStream()
         case .cancelled:
             cleanUpState()
+            #if os(iOS)
             DispatchQueue.main.async {
                 let state = UIApplication.shared.applicationState
                 if state == .active || state == .inactive { // Only connect when in foreground
                     self.connect() // TODO: Check if we want to have wait / cooldown time
                 }
             }
+            #else
+            self.connect() // TODO: Check if we want to have wait / cooldown time
+            #endif
         case .failed(_):
             cleanUpState()
         default:

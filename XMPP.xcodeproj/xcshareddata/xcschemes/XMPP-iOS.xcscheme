@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0277680121A56A400002BA32"
-               BuildableName = "XMPP.framework"
-               BlueprintName = "XMPP"
+               BuildableName = "XMPP_iOS.framework"
+               BlueprintName = "XMPP-iOS"
                ReferencedContainer = "container:XMPP.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0277680A21A56A400002BA32"
-               BuildableName = "XMPPTests.xctest"
-               BlueprintName = "XMPPTests"
+               BuildableName = "XMPPTests-iOS.xctest"
+               BlueprintName = "XMPPTests-iOS"
                ReferencedContainer = "container:XMPP.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0277680121A56A400002BA32"
-            BuildableName = "XMPP.framework"
-            BlueprintName = "XMPP"
+            BuildableName = "XMPP_iOS.framework"
+            BlueprintName = "XMPP-iOS"
             ReferencedContainer = "container:XMPP.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,8 +65,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0277680121A56A400002BA32"
-            BuildableName = "XMPP.framework"
-            BlueprintName = "XMPP"
+            BuildableName = "XMPP_iOS.framework"
+            BlueprintName = "XMPP-iOS"
             ReferencedContainer = "container:XMPP.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -83,8 +83,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0277680121A56A400002BA32"
-            BuildableName = "XMPP.framework"
-            BlueprintName = "XMPP"
+            BuildableName = "XMPP_iOS.framework"
+            BlueprintName = "XMPP-iOS"
             ReferencedContainer = "container:XMPP.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

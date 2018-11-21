@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0277680C21A56A400002BA32 /* XMPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0277680221A56A400002BA32 /* XMPP.framework */; };
+		0277680C21A56A400002BA32 /* XMPP_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0277680221A56A400002BA32 /* XMPP_iOS.framework */; };
 		0277681121A56A400002BA32 /* XMPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277681021A56A400002BA32 /* XMPPTests.swift */; };
 		0277681E21A56B100002BA32 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0277681D21A56B100002BA32 /* libxml2.2.tbd */; };
 		0277682021A56E0B0002BA32 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277681F21A56E0B0002BA32 /* Auth.swift */; };
@@ -34,6 +34,33 @@
 		0277685121A571F20002BA32 /* broken-mock.mobileprovision in Resources */ = {isa = PBXBuildFile; fileRef = 0277684E21A571F20002BA32 /* broken-mock.mobileprovision */; };
 		0277685221A571F20002BA32 /* dev-mock.mobileprovision in Resources */ = {isa = PBXBuildFile; fileRef = 0277684F21A571F20002BA32 /* dev-mock.mobileprovision */; };
 		0277685321A571F20002BA32 /* prod-mock.mobileprovision in Resources */ = {isa = PBXBuildFile; fileRef = 0277685021A571F20002BA32 /* prod-mock.mobileprovision */; };
+		027768CF21A5CD730002BA32 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 027768CE21A5CD730002BA32 /* libxml2.2.tbd */; };
+		027768D121A5CFEE0002BA32 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277682621A56E170002BA32 /* Config.swift */; };
+		027768D221A5CFEE0002BA32 /* MobileProvision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277682921A56E170002BA32 /* MobileProvision.swift */; };
+		027768D321A5CFEE0002BA32 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683A21A56E260002BA32 /* Connection.swift */; };
+		027768D421A5CFEE0002BA32 /* StreamObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683B21A56E260002BA32 /* StreamObserver.swift */; };
+		027768D521A5CFEE0002BA32 /* ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683C21A56E260002BA32 /* ConnectionError.swift */; };
+		027768D621A5CFEE0002BA32 /* Stanza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683321A56E260002BA32 /* Stanza.swift */; };
+		027768D721A5CFEE0002BA32 /* SAX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683421A56E260002BA32 /* SAX.swift */; };
+		027768D821A5CFEE0002BA32 /* XMLStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683521A56E260002BA32 /* XMLStream.swift */; };
+		027768D921A5CFEE0002BA32 /* IQParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683621A56E260002BA32 /* IQParser.swift */; };
+		027768DA21A5CFEE0002BA32 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683721A56E260002BA32 /* Parser.swift */; };
+		027768DB21A5CFEE0002BA32 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277682221A56E170002BA32 /* Message.swift */; };
+		027768DC21A5CFEE0002BA32 /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277682321A56E170002BA32 /* Encoder.swift */; };
+		027768DD21A5CFEE0002BA32 /* IQEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277682421A56E170002BA32 /* IQEncoder.swift */; };
+		027768DE21A5CFEE0002BA32 /* PresenceEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277682521A56E170002BA32 /* PresenceEncoder.swift */; };
+		027768E121A5CFEE0002BA32 /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277682721A56E170002BA32 /* Features.swift */; };
+		027768E221A5CFEE0002BA32 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277681F21A56E0B0002BA32 /* Auth.swift */; };
+		027768E321A5CFEE0002BA32 /* JID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683821A56E260002BA32 /* JID.swift */; };
+		027768E421A5CFEE0002BA32 /* XMPP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683121A56E260002BA32 /* XMPP.swift */; };
+		027768F121A5D4180002BA32 /* libXMPP-MacOS.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 027768C521A5CD520002BA32 /* libXMPP-MacOS.dylib */; };
+		027768F721A5D46D0002BA32 /* broken-mock.mobileprovision in Resources */ = {isa = PBXBuildFile; fileRef = 0277684E21A571F20002BA32 /* broken-mock.mobileprovision */; };
+		027768F821A5D46D0002BA32 /* dev-mock.mobileprovision in Resources */ = {isa = PBXBuildFile; fileRef = 0277684F21A571F20002BA32 /* dev-mock.mobileprovision */; };
+		027768F921A5D46D0002BA32 /* prod-mock.mobileprovision in Resources */ = {isa = PBXBuildFile; fileRef = 0277685021A571F20002BA32 /* prod-mock.mobileprovision */; };
+		027768FA21A5D5270002BA32 /* SerializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277684821A571900002BA32 /* SerializerTests.swift */; };
+		027768FB21A5D5270002BA32 /* IQEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277684921A571900002BA32 /* IQEncoderTests.swift */; };
+		027768FC21A5D5270002BA32 /* XMPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277681021A56A400002BA32 /* XMPPTests.swift */; };
+		027768FD21A5D5270002BA32 /* MobileProvisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277684721A571900002BA32 /* MobileProvisionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,12 +71,19 @@
 			remoteGlobalIDString = 0277680121A56A400002BA32;
 			remoteInfo = XMPP;
 		};
+		027768F221A5D4180002BA32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 027767F921A56A400002BA32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 027768C421A5CD520002BA32;
+			remoteInfo = "XMPP-MacOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0277680221A56A400002BA32 /* XMPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XMPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0277680221A56A400002BA32 /* XMPP_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XMPP_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0277680621A56A400002BA32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0277680B21A56A400002BA32 /* XMPPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XMPPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0277680B21A56A400002BA32 /* XMPPTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XMPPTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0277681021A56A400002BA32 /* XMPPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMPPTests.swift; sourceTree = "<group>"; };
 		0277681221A56A400002BA32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0277681D21A56B100002BA32 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
@@ -77,6 +111,9 @@
 		0277684E21A571F20002BA32 /* broken-mock.mobileprovision */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "broken-mock.mobileprovision"; sourceTree = "<group>"; };
 		0277684F21A571F20002BA32 /* dev-mock.mobileprovision */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "dev-mock.mobileprovision"; sourceTree = "<group>"; };
 		0277685021A571F20002BA32 /* prod-mock.mobileprovision */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "prod-mock.mobileprovision"; sourceTree = "<group>"; };
+		027768C521A5CD520002BA32 /* libXMPP-MacOS.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libXMPP-MacOS.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		027768CE21A5CD730002BA32 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/lib/libxml2.2.tbd; sourceTree = DEVELOPER_DIR; };
+		027768EC21A5D4180002BA32 /* XMPPTests-MacOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XMPPTests-MacOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +129,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0277680C21A56A400002BA32 /* XMPP.framework in Frameworks */,
+				0277680C21A56A400002BA32 /* XMPP_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		027768C321A5CD520002BA32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				027768CF21A5CD730002BA32 /* libxml2.2.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		027768E921A5D4180002BA32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				027768F121A5D4180002BA32 /* libXMPP-MacOS.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,8 +165,10 @@
 		0277680321A56A400002BA32 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0277680221A56A400002BA32 /* XMPP.framework */,
-				0277680B21A56A400002BA32 /* XMPPTests.xctest */,
+				0277680221A56A400002BA32 /* XMPP_iOS.framework */,
+				0277680B21A56A400002BA32 /* XMPPTests-iOS.xctest */,
+				027768C521A5CD520002BA32 /* libXMPP-MacOS.dylib */,
+				027768EC21A5D4180002BA32 /* XMPPTests-MacOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +205,7 @@
 		0277681C21A56B0F0002BA32 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				027768CE21A5CD730002BA32 /* libxml2.2.tbd */,
 				0277681D21A56B100002BA32 /* libxml2.2.tbd */,
 			);
 			name = Frameworks;
@@ -217,12 +273,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		027768C121A5CD520002BA32 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0277680121A56A400002BA32 /* XMPP */ = {
+		0277680121A56A400002BA32 /* XMPP-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0277681621A56A400002BA32 /* Build configuration list for PBXNativeTarget "XMPP" */;
+			buildConfigurationList = 0277681621A56A400002BA32 /* Build configuration list for PBXNativeTarget "XMPP-iOS" */;
 			buildPhases = (
 				027767FD21A56A400002BA32 /* Headers */,
 				027767FE21A56A400002BA32 /* Sources */,
@@ -233,14 +296,14 @@
 			);
 			dependencies = (
 			);
-			name = XMPP;
+			name = "XMPP-iOS";
 			productName = XMPP;
-			productReference = 0277680221A56A400002BA32 /* XMPP.framework */;
+			productReference = 0277680221A56A400002BA32 /* XMPP_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0277680A21A56A400002BA32 /* XMPPTests */ = {
+		0277680A21A56A400002BA32 /* XMPPTests-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0277681921A56A400002BA32 /* Build configuration list for PBXNativeTarget "XMPPTests" */;
+			buildConfigurationList = 0277681921A56A400002BA32 /* Build configuration list for PBXNativeTarget "XMPPTests-iOS" */;
 			buildPhases = (
 				0277680721A56A400002BA32 /* Sources */,
 				0277680821A56A400002BA32 /* Frameworks */,
@@ -251,9 +314,44 @@
 			dependencies = (
 				0277680E21A56A400002BA32 /* PBXTargetDependency */,
 			);
-			name = XMPPTests;
+			name = "XMPPTests-iOS";
 			productName = XMPPTests;
-			productReference = 0277680B21A56A400002BA32 /* XMPPTests.xctest */;
+			productReference = 0277680B21A56A400002BA32 /* XMPPTests-iOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		027768C421A5CD520002BA32 /* XMPP-MacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 027768CD21A5CD520002BA32 /* Build configuration list for PBXNativeTarget "XMPP-MacOS" */;
+			buildPhases = (
+				027768C121A5CD520002BA32 /* Headers */,
+				027768C221A5CD520002BA32 /* Sources */,
+				027768C321A5CD520002BA32 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "XMPP-MacOS";
+			productName = "XMPP-MacOS";
+			productReference = 027768C521A5CD520002BA32 /* libXMPP-MacOS.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		027768EB21A5D4180002BA32 /* XMPPTests-MacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 027768F421A5D4180002BA32 /* Build configuration list for PBXNativeTarget "XMPPTests-MacOS" */;
+			buildPhases = (
+				027768E821A5D4180002BA32 /* Sources */,
+				027768E921A5D4180002BA32 /* Frameworks */,
+				027768EA21A5D4180002BA32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				027768F321A5D4180002BA32 /* PBXTargetDependency */,
+			);
+			name = "XMPPTests-MacOS";
+			productName = "XMPPTests-MacOS";
+			productReference = 027768EC21A5D4180002BA32 /* XMPPTests-MacOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -273,6 +371,12 @@
 					0277680A21A56A400002BA32 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					027768C421A5CD520002BA32 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					027768EB21A5D4180002BA32 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 027767FC21A56A400002BA32 /* Build configuration list for PBXProject "XMPP" */;
@@ -287,8 +391,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0277680121A56A400002BA32 /* XMPP */,
-				0277680A21A56A400002BA32 /* XMPPTests */,
+				0277680121A56A400002BA32 /* XMPP-iOS */,
+				027768C421A5CD520002BA32 /* XMPP-MacOS */,
+				0277680A21A56A400002BA32 /* XMPPTests-iOS */,
+				027768EB21A5D4180002BA32 /* XMPPTests-MacOS */,
 			);
 		};
 /* End PBXProject section */
@@ -308,6 +414,16 @@
 				0277685121A571F20002BA32 /* broken-mock.mobileprovision in Resources */,
 				0277685321A571F20002BA32 /* prod-mock.mobileprovision in Resources */,
 				0277685221A571F20002BA32 /* dev-mock.mobileprovision in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		027768EA21A5D4180002BA32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				027768F721A5D46D0002BA32 /* broken-mock.mobileprovision in Resources */,
+				027768F821A5D46D0002BA32 /* dev-mock.mobileprovision in Resources */,
+				027768F921A5D46D0002BA32 /* prod-mock.mobileprovision in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,13 +466,54 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		027768C221A5CD520002BA32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				027768D121A5CFEE0002BA32 /* Config.swift in Sources */,
+				027768D221A5CFEE0002BA32 /* MobileProvision.swift in Sources */,
+				027768D321A5CFEE0002BA32 /* Connection.swift in Sources */,
+				027768D421A5CFEE0002BA32 /* StreamObserver.swift in Sources */,
+				027768D521A5CFEE0002BA32 /* ConnectionError.swift in Sources */,
+				027768D621A5CFEE0002BA32 /* Stanza.swift in Sources */,
+				027768D721A5CFEE0002BA32 /* SAX.swift in Sources */,
+				027768D821A5CFEE0002BA32 /* XMLStream.swift in Sources */,
+				027768D921A5CFEE0002BA32 /* IQParser.swift in Sources */,
+				027768DA21A5CFEE0002BA32 /* Parser.swift in Sources */,
+				027768DB21A5CFEE0002BA32 /* Message.swift in Sources */,
+				027768DC21A5CFEE0002BA32 /* Encoder.swift in Sources */,
+				027768DD21A5CFEE0002BA32 /* IQEncoder.swift in Sources */,
+				027768DE21A5CFEE0002BA32 /* PresenceEncoder.swift in Sources */,
+				027768E121A5CFEE0002BA32 /* Features.swift in Sources */,
+				027768E221A5CFEE0002BA32 /* Auth.swift in Sources */,
+				027768E321A5CFEE0002BA32 /* JID.swift in Sources */,
+				027768E421A5CFEE0002BA32 /* XMPP.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		027768E821A5D4180002BA32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				027768FA21A5D5270002BA32 /* SerializerTests.swift in Sources */,
+				027768FB21A5D5270002BA32 /* IQEncoderTests.swift in Sources */,
+				027768FC21A5D5270002BA32 /* XMPPTests.swift in Sources */,
+				027768FD21A5D5270002BA32 /* MobileProvisionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		0277680E21A56A400002BA32 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0277680121A56A400002BA32 /* XMPP */;
+			target = 0277680121A56A400002BA32 /* XMPP-iOS */;
 			targetProxy = 0277680D21A56A400002BA32 /* PBXContainerItemProxy */;
+		};
+		027768F321A5D4180002BA32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 027768C421A5CD520002BA32 /* XMPP-MacOS */;
+			targetProxy = 027768F221A5D4180002BA32 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -495,8 +652,9 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = XMPP/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/XMPP/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -523,8 +681,9 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = XMPP/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/XMPP/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -576,6 +735,88 @@
 			};
 			name = Release;
 		};
+		027768CB21A5CD520002BA32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8L55BDM864;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = "$(SRCROOT)/XMPP/Info-iOS.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_MODULE_NAME = XMPP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		027768CC21A5CD520002BA32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8L55BDM864;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = "$(SRCROOT)/XMPP/Info-iOS.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_MODULE_NAME = XMPP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		027768F521A5D4180002BA32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8L55BDM864;
+				INFOPLIST_FILE = XMPPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.process-one.XMPPTests-MacOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		027768F621A5D4180002BA32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8L55BDM864;
+				INFOPLIST_FILE = XMPPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.process-one.XMPPTests-MacOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -588,7 +829,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0277681621A56A400002BA32 /* Build configuration list for PBXNativeTarget "XMPP" */ = {
+		0277681621A56A400002BA32 /* Build configuration list for PBXNativeTarget "XMPP-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0277681721A56A400002BA32 /* Debug */,
@@ -597,11 +838,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0277681921A56A400002BA32 /* Build configuration list for PBXNativeTarget "XMPPTests" */ = {
+		0277681921A56A400002BA32 /* Build configuration list for PBXNativeTarget "XMPPTests-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0277681A21A56A400002BA32 /* Debug */,
 				0277681B21A56A400002BA32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		027768CD21A5CD520002BA32 /* Build configuration list for PBXNativeTarget "XMPP-MacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				027768CB21A5CD520002BA32 /* Debug */,
+				027768CC21A5CD520002BA32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		027768F421A5D4180002BA32 /* Build configuration list for PBXNativeTarget "XMPPTests-MacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				027768F521A5D4180002BA32 /* Debug */,
+				027768F621A5D4180002BA32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
