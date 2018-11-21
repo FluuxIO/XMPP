@@ -13,8 +13,8 @@ Fluux XMPP is a clean slate implementation, with the following goals in mind:
 
 1. Create your project as usual in XCode.
 2. Save your project as a workspace, so that you can build your dependencies as submodules. Close the project.
-3. Install Carthage, if you do not already have the tool installed
-4. Create a Cartfile (or update your existing one) to include Fluux XMPP as a dependency:
+3. Install [Carthage](https://github.com/Carthage/Carthage), if you do not already have the tool installed
+4. Create a `Cartfile` (or update your existing one) to include Fluux XMPP as a dependency:
    ```
    git "git@github.com:FluuxIO/XMPP.git" ~> 0.0
    ```
