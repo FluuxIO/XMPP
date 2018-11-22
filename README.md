@@ -6,7 +6,7 @@ Fluux XMPP is a clean slate implementation, with the following goals in mind:
 
 - Focus on simplicity, by hiding XMPP technical details and exposing only chat oriented methods.
 - Focus on modern Swift, recent iOS version and modern XMPP. The library ignores legacy or deprecated features on purpose.
-- Focus on maintainability. XMPP is a complex protocol and maintainability should be the main criteria for design decision to be able to be sustainable in the long term.
+- Focus on maintainability. XMPP is a complex protocol and maintainability should be the main criteria for design decision to be able to be sustainable in the long term. For the same reason, we also aim at limiting the dependencies as much as possible.
 - Focus on efficiency and scalability, leveraging only part of the XMPP protocol that are scalable. Many XEPs are too consuming to be used on large scale on production.
 
 As a result, on iOS, we target iOS version 12+.
