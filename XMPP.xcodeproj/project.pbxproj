@@ -155,7 +155,7 @@
 		027767F821A56A400002BA32 = {
 			isa = PBXGroup;
 			children = (
-				0277680421A56A400002BA32 /* XMPP */,
+				02D4A6DB21A7102300298CEA /* Sources */,
 				0277680F21A56A400002BA32 /* XMPPTests */,
 				0277680321A56A400002BA32 /* Products */,
 				0277681C21A56B0F0002BA32 /* Frameworks */,
@@ -261,6 +261,14 @@
 				0277685021A571F20002BA32 /* prod-mock.mobileprovision */,
 			);
 			path = TestData;
+			sourceTree = "<group>";
+		};
+		02D4A6DB21A7102300298CEA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0277680421A56A400002BA32 /* XMPP */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -652,7 +660,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "$(SRCROOT)/XMPP/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/XMPP/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -681,7 +689,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "$(SRCROOT)/XMPP/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/XMPP/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (

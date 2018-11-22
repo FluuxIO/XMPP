@@ -1,0 +1,4 @@
+module libxml2 {
+    umbrella header "libxml2.h"
+    link "xml2"
+}

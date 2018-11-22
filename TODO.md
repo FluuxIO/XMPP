@@ -1,5 +1,10 @@
 # TODO
 
+- Organise tests for Swift PM, staying compliant with XCode setup.
+- Test project setup with Carthage on iOS and MacOS
+- Test project setup with Cocoapods on iOS and MacOS
+- Test project setup with Swift PM
+
 ## Backlog
 
 - MacOS support
@@ -19,6 +24,7 @@
 - Message ack
 - Persistent outgoing message queue to accumulate when there is no network
 - Retry sending unsent messages in background
+- Check progress on [SE-0236](https://forums.swift.org/t/se-0236-package-manager-platform-deployment-settings/17992) to update Package.swift and update doc.
 
 # Done
 

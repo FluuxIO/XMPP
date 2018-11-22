@@ -59,8 +59,26 @@ You can thus use it as follows:
    ```bash
    pod install
    ```
-4. Open the workspace. You can now start using Fluux XMPP. Here is an example of minimal code you can add to your app to to an XMPP client:     [Fluux XMPP client example for Fluux XMPP v0.0.1](https://gist.github.com/mremond/319dd29f2c308cf807f199b812260f98).
+4. Open the workspace. You can now start using Fluux XMPP. Here is an example of minimal code you can add to your app to to an XMPP client:
+[Fluux XMPP client example for Fluux XMPP v0.0.1](https://gist.github.com/mremond/319dd29f2c308cf807f199b812260f98).
 
+## Using Swift Package
+
+You can build the lib using Swift Package Manager, thanks to the provided `Package.swift` file.
+
+However, as we are using Apple newest `Network.framework`, you need at least MacOS 10.14 (Mojave).
+
+You also need to properly set your build target to MacOS 10.14 explicitely, as, at the moment, Swift PM uses MacOS 10.10 as an 
+hardcoded value for the deployment target (more on this [here](https://oleb.net/blog/2017/04/swift-3-1-package-manager-deployment-target/)
+
+Here is a typical build command you can pass to your project:
+
+```bash
+swift build -Xswiftc "-target" -Xswiftc "x86_64-apple-macosx10.14"
+```
+
+The plan is to use Swift-NIO instead on Network.framework on platform where that new framework is not available, i.e. Linux
+and older MacOS version. Swift-NIO is not available on iOS.
 
 ## TLS support
 
