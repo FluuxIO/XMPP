@@ -159,7 +159,7 @@ public final class XMPP: ConnectionDelegate, StreamManagerDelegate {
             #endif
         case .failed(_):
             cleanUpState()
-            handler?()
+            onDisconnect?()
         default:
             break
         }
