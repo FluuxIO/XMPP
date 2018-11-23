@@ -69,15 +69,66 @@ You can build the lib using Swift Package Manager, thanks to the provided `Packa
 However, as we are using Apple newest `Network.framework`, you need at least MacOS 10.14 (Mojave).
 
 You also need to properly set your build target to MacOS 10.14 explicitely, as, at the moment, Swift PM uses MacOS 10.10 as an 
-hardcoded value for the deployment target (more on this [here](https://oleb.net/blog/2017/04/swift-3-1-package-manager-deployment-target/)
+hardcoded value for the deployment target (more on this [here](https://oleb.net/blog/2017/04/swift-3-1-package-manager-deployment-target/)).
 
-Here is a typical build command you can pass to your project:
+To integrate Fluux XMPP in your Swift PM project, you can add it as a dependency of your project in your
+`Package.swift` file. For example:
+
+```swift
+// swift-tools-version:4.2
+
+import PackageDescription
+
+let package = Package(
+    name: "XMPPDemo",
+    dependencies: [
+        // Dependencies declare other packages that this package depends on.
+        .package(url: "https://github.com/FluuxIO/XMPP.git", from: "0.0.2"),
+    ],
+    targets: [
+        .target(
+            name: "XMPPDemo",
+            dependencies: ["XMPP"]),
+        .testTarget(
+            name: "XMPPDemoTests",
+            dependencies: ["XMPPDemo"]),
+    ]
+)
+```
+
+You can modify your command line executable to start a XMPP client. For example:
+
+```swift
+import Foundation
+import XMPP
+
+
+guard let jid = JID("mremond@localhost") else { print("Invalid JID"); exit(1) }
+var xmppConfig = Config(jid: jid, password: "mypass", useTLS: true)
+xmppConfig.allowInsecure = true
+xmppConfig.host = "MacBook-Pro-de-Mickael.local"
+xmppConfig.streamObserver = DefaultStreamObserver()
+
+let client = XMPP(config: xmppConfig)
+client.connect()
+
+sleep(1000)
+
+```
+
+Here is a typical build command you can pass to your project, to force the minimal build target to MacOS Mojave:
 
 ```bash
 swift build -Xswiftc "-target" -Xswiftc "x86_64-apple-macosx10.14"
 ```
 
-The plan is to use Swift-NIO instead on Network.framework on platform where that new framework is not available, i.e. Linux
+You can then run your console client:
+
+```bash
+.build/debug/XMPPDemo
+```
+
+The plan is to use Swift-NIO instead on Network.framework on platforms where that new framework is not available, i.e. Linux
 and older MacOS version. Swift-NIO is not available on iOS.
 
 ## TLS support
