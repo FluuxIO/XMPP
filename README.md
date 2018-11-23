@@ -104,16 +104,20 @@ import XMPP
 
 
 guard let jid = JID("mremond@localhost") else { print("Invalid JID"); exit(1) }
-var xmppConfig = Config(jid: jid, password: "mypass", useTLS: true)
+var xmppConfig = Config(jid: jid, password: "nimda", useTLS: true)
 xmppConfig.allowInsecure = true
 xmppConfig.host = "MacBook-Pro-de-Mickael.local"
 xmppConfig.streamObserver = DefaultStreamObserver()
 
 let client = XMPP(config: xmppConfig)
-client.connect()
 
-sleep(1000)
+let semaphore = DispatchSemaphore(value: 0)
+client.connect {
+  print("Disconnected !")
+  semaphore.signal() 
+}
 
+_ = semaphore.wait(timeout: DispatchTime.distantFuture)
 ```
 
 Here is a typical build command you can pass to your project, to force the minimal build target to MacOS Mojave:
