@@ -151,10 +151,15 @@ public final class XMPP: ConnectionDelegate, StreamManagerDelegate {
                 }
             }
             #else
-            self.connect() // TODO: Check if we want to have wait / cooldown time
+            if let handler = onDisconnect {
+                handler()
+            } else {
+                self.connect() // TODO: Check if we want to have wait / cooldown time
+            }
             #endif
         case .failed(_):
             cleanUpState()
+            handler?()
         default:
             break
         }
