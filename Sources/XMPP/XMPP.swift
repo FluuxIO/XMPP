@@ -79,6 +79,9 @@ public final class XMPP: ConnectionDelegate, StreamManagerDelegate {
         conn.start(useTLS: config.useTLS, allowInsecure: config.allowInsecure)
     }
     
+    
+    // ============================================================================
+    // iOS background support
     // Switch client to background mode
     public func enterBackground() {
         keepAliveTimer?.invalidate()
@@ -169,7 +172,7 @@ public final class XMPP: ConnectionDelegate, StreamManagerDelegate {
     
     // Receive parsed data from Parser
     func processEvent(_ stanza: Stanza) {
-        print("Process Even node: \(stanza)")
+        //print("Process Even node: \(stanza)")
         // TODO: catch error to pass them to client using the library
         switch xmppState {
         case .streamOpen:
