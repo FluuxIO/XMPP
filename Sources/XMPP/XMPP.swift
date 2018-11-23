@@ -38,6 +38,7 @@ import UIKit
 // TODO: Add diagram of dependency for the XMPP client facade.
 public final class XMPP: ConnectionDelegate, StreamManagerDelegate {
     public var delegate: XMPPDelegate?
+    var onDisconnect: DisconnectHandler?
     
     // XMPP client configuration
     var config: Config
@@ -59,7 +60,8 @@ public final class XMPP: ConnectionDelegate, StreamManagerDelegate {
     
     // State management
     enum state {
-        case streamOpen, waitForRebind, waitForAuth, waitForFeatures, waitForBind, connected, disconnect
+        case streamOpen, waitForRebind, waitForAuth, waitForFeatures, waitForBind,
+             connected, disconnect, background
     }
 
     public init(config conf: Config) {
@@ -73,12 +75,23 @@ public final class XMPP: ConnectionDelegate, StreamManagerDelegate {
         conn.delegate = self
     }
     
+    public typealias DisconnectHandler = () -> Void
+    
     // Initiate actual XMPP client connection
-    public func connect() {
+    public func connect(_ disconnectHandler: DisconnectHandler? = nil) {
         xmppState = .streamOpen
+        if let handler = disconnectHandler {
+            onDisconnect = handler
+        }
         conn.start(useTLS: config.useTLS, allowInsecure: config.allowInsecure)
     }
     
+    // Terminate the XMPP client.
+    // This called is either user initiated or trigger or non recoverable errors
+    public func terminate() {
+        conn.stop()
+        onDisconnect?()
+    }
     
     // ============================================================================
     // iOS background support
@@ -86,7 +99,7 @@ public final class XMPP: ConnectionDelegate, StreamManagerDelegate {
     public func enterBackground() {
         keepAliveTimer?.invalidate()
         conn.stop()
-        xmppState = .disconnect
+        xmppState = .background
     }
     
     public func enterForeground() {
@@ -191,8 +204,8 @@ public final class XMPP: ConnectionDelegate, StreamManagerDelegate {
             // print("[XMPP] Received: \(stanza)")
             // Route XMPP stanza to client
             delegate?.onStanza(stanza)
-        case .disconnect:
-            print("Received unexpected stanza when disconnected: \(stanza)")
+        default:
+            print("Received unexpected stanza in state \(xmppState): \(stanza)")
         }
     }
     
@@ -208,13 +221,13 @@ public final class XMPP: ConnectionDelegate, StreamManagerDelegate {
         case "error":
             //let err = XMPPError(node: stanza) ?? XMPPError(type: "stream-open", text: "unknown error")
             // router.connectionResult(channel: _channel, result: Result<Jid>.error(err))
-            conn.stop()
+            terminate()
             return .disconnect
         default:
             print("Default case: \(node)")
             // let err = XMPPError(type: "stream-open", text: "unknown error")
             // router.connectionResult(channel: _channel, result: Result<Jid>.error(err))
-            conn.stop()
+            terminate()
             return .disconnect
         }
     }
@@ -249,11 +262,11 @@ public final class XMPP: ConnectionDelegate, StreamManagerDelegate {
                 return newState
             }
             // No mechanisms in cache => Fails
-            conn.stop()
+            terminate()
             return .disconnect
         default:
             print("Unknown rebind result: \(stanza)")
-            conn.stop()
+            terminate()
             return .disconnect
         }
     }
@@ -300,7 +313,7 @@ public final class XMPP: ConnectionDelegate, StreamManagerDelegate {
             }
             let err = ConnectionError.session(SessionError(type: type, text: text))
             delegate?.onConnectionUpdate(State.failed(err))
-            conn.stop()
+            terminate()
             return .disconnect
         default:
             print("unknown response to auth packet")
@@ -336,7 +349,7 @@ public final class XMPP: ConnectionDelegate, StreamManagerDelegate {
             return .connected
         } else {
             // TODO: failure handler
-            conn.stop()
+            terminate()
             return .disconnect
         }
     }
