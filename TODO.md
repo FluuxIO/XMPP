@@ -3,7 +3,6 @@
 - Organise tests for Swift PM, staying compliant with XCode setup.
 - Test project setup with Carthage on iOS and MacOS
 - Test project setup with Cocoapods on iOS and MacOS
-- Test project setup with Swift PM
 
 ## Backlog
 
@@ -28,6 +27,7 @@
 
 # Done
 
+- Test project setup with Swift PM
 - Publish in Cocoapods / test using project from Carthage
 - Bootstrap the framework to make it usable from Carthage, Cocoapod or Git submodules
 - Observe incoming and outgoing Stream content to help with debugging. It could be used in a standalone XMPP console for iPad.
