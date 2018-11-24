@@ -9,6 +9,7 @@
 import XCTest
 @testable import XMPP
 
+// TODO: Bundle.path mock load will not work on Swift package tests
 class MobileProvisionTests: XCTestCase {
 
     func testDecodeMobileProvision() {
