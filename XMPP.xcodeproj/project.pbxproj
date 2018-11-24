@@ -156,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				02D4A6DB21A7102300298CEA /* Sources */,
-				0277680F21A56A400002BA32 /* XMPPTests */,
+				02D4A6DD21A9458100298CEA /* Tests */,
 				0277680321A56A400002BA32 /* Products */,
 				0277681C21A56B0F0002BA32 /* Frameworks */,
 			);
@@ -269,6 +269,14 @@
 				0277680421A56A400002BA32 /* XMPP */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		02D4A6DD21A9458100298CEA /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0277680F21A56A400002BA32 /* XMPPTests */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -711,7 +719,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8L55BDM864;
-				INFOPLIST_FILE = XMPPTests/Info.plist;
+				INFOPLIST_FILE = Tests/XMPPTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -730,7 +738,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8L55BDM864;
-				INFOPLIST_FILE = XMPPTests/Info.plist;
+				INFOPLIST_FILE = Tests/XMPPTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -790,7 +798,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8L55BDM864;
-				INFOPLIST_FILE = XMPPTests/Info.plist;
+				INFOPLIST_FILE = Tests/XMPPTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -811,7 +819,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8L55BDM864;
-				INFOPLIST_FILE = XMPPTests/Info.plist;
+				INFOPLIST_FILE = Tests/XMPPTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
