@@ -1,12 +1,10 @@
 # TODO
 
-- Organise tests for Swift PM, staying compliant with XCode setup.
 - Test project setup with Carthage on iOS and MacOS
 - Test project setup with Cocoapods on iOS and MacOS
 
 ## Backlog
 
-- MacOS support
 - Document code (Jazzy?).
 - Detect connection loss when not receiving the replies from the keep-alive
 - Detect p1:push support before sending p1:push configuration.
@@ -17,7 +15,6 @@
 - Add support for optional session
 - Add roster query support.
 - End to end encryption support
-- MacOS support
 - Linux support with SwiftNIO
 - Attempt to run it on Android ?
 - Message ack
@@ -27,6 +24,8 @@
 
 # Done
 
+- MacOS support
+- Organise tests for Swift PM, staying compliant with XCode setup.
 - Test project setup with Swift PM
 - Publish in Cocoapods / test using project from Carthage
 - Bootstrap the framework to make it usable from Carthage, Cocoapod or Git submodules
