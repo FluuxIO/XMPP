@@ -6,15 +6,11 @@ import PackageDescription
 let package = Package(
     name: "XMPP",
     products: [
-        .library(
-            name: "XMPP",
-            targets: ["XMPP"]),
+        .library(name: "XMPP", targets: ["XMPP"]),
     ],
     targets: [
         .systemLibrary(name: "libxml2", pkgConfig: "libxml-2.0", providers: [.brew(["libxml2"])]),
         .target(name: "XMPP", dependencies: ["libxml2"]),
-//        .testTarget(
-//            name: "XMPPTests",
-//            dependencies: ["XMPP"]),
+        .testTarget(name: "XMPPTests", dependencies: ["XMPP"]),
     ]
 )
