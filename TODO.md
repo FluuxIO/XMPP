@@ -1,5 +1,6 @@
 # TODO
 
+- Split XMPP file into several files / extensions
 - Test project setup with Carthage on iOS and MacOS
 - Test project setup with Cocoapods on iOS and MacOS
 
