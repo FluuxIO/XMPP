@@ -104,7 +104,7 @@ import XMPP
 
 
 guard let jid = JID("mremond@localhost") else { print("Invalid JID"); exit(1) }
-var xmppConfig = Config(jid: jid, password: "nimda", useTLS: true)
+var xmppConfig = Config(jid: jid, password: "mypass", useTLS: true)
 xmppConfig.allowInsecure = true
 xmppConfig.host = "MacBook-Pro-de-Mickael.local"
 xmppConfig.streamObserver = DefaultStreamObserver()
@@ -134,6 +134,12 @@ You can then run your console client:
 
 The plan is to use Swift-NIO instead on Network.framework on platforms where that new framework is not available, i.e. Linux
 and older MacOS version. Swift-NIO is not available on iOS.
+
+The tests can be run with the command:
+
+```bash
+swift test -Xswiftc "-target" -Xswiftc "x86_64-apple-macosx10.14"
+```
 
 ## TLS support
 
