@@ -8,9 +8,12 @@ let package = Package(
     products: [
         .library(name: "XMPP", targets: ["XMPP"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/apple/swift-nio.git", from: "1.11.0"),
+    ],
     targets: [
         .systemLibrary(name: "libxml2", pkgConfig: "libxml-2.0", providers: [.brew(["libxml2"])]),
-        .target(name: "XMPP", dependencies: ["libxml2"]),
+        .target(name: "XMPP", dependencies: ["libxml2", "NIO"], exclude: ["Networking/AppleOS/"]),
         .testTarget(name: "XMPPTests", dependencies: ["XMPP"]),
     ]
 )

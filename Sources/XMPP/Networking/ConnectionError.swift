@@ -11,7 +11,7 @@ import Network
 // TODO: Support error description
 public enum ConnectionError: Error {
     // Error can come from NWError
-    case network(NWError)
+    case network(Error)
     // or it can be an error at XMPP level, coming from session establishment
     case session(SessionError)
 }

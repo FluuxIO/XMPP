@@ -63,6 +63,8 @@
 		027768FD21A5D5270002BA32 /* MobileProvisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277684721A571900002BA32 /* MobileProvisionTests.swift */; };
 		02D4A6E021A94C8200298CEA /* TestsHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4A6DE21A94C6000298CEA /* TestsHelpers.swift */; };
 		02D4A6E121A94C8200298CEA /* TestsHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4A6DE21A94C6000298CEA /* TestsHelpers.swift */; };
+		02D4A81B21AB06CF00298CEA /* ConnectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4A81A21AB06CF00298CEA /* ConnectionProtocol.swift */; };
+		02D4A81C21AB06D400298CEA /* ConnectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4A81A21AB06CF00298CEA /* ConnectionProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +119,8 @@
 		027768CE21A5CD730002BA32 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/lib/libxml2.2.tbd; sourceTree = DEVELOPER_DIR; };
 		027768EC21A5D4180002BA32 /* XMPPTests-MacOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XMPPTests-MacOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D4A6DE21A94C6000298CEA /* TestsHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsHelpers.swift; sourceTree = "<group>"; };
+		02D4A81A21AB06CF00298CEA /* ConnectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionProtocol.swift; sourceTree = "<group>"; };
+		02D4A81F21AB090600298CEA /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,9 +254,11 @@
 		0277683921A56E260002BA32 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				0277683A21A56E260002BA32 /* Connection.swift */,
+				02D4A81E21AB090600298CEA /* NIO */,
+				02D4A81D21AB077300298CEA /* AppleOS */,
 				0277683B21A56E260002BA32 /* StreamObserver.swift */,
 				0277683C21A56E260002BA32 /* ConnectionError.swift */,
+				02D4A81A21AB06CF00298CEA /* ConnectionProtocol.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -281,6 +287,22 @@
 				0277680F21A56A400002BA32 /* XMPPTests */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		02D4A81D21AB077300298CEA /* AppleOS */ = {
+			isa = PBXGroup;
+			children = (
+				0277683A21A56E260002BA32 /* Connection.swift */,
+			);
+			path = AppleOS;
+			sourceTree = "<group>";
+		};
+		02D4A81E21AB090600298CEA /* NIO */ = {
+			isa = PBXGroup;
+			children = (
+				02D4A81F21AB090600298CEA /* Connection.swift */,
+			);
+			path = NIO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,6 +493,7 @@
 				0277682A21A56E170002BA32 /* Message.swift in Sources */,
 				0277682B21A56E170002BA32 /* Encoder.swift in Sources */,
 				0277682E21A56E170002BA32 /* Config.swift in Sources */,
+				02D4A81B21AB06CF00298CEA /* ConnectionProtocol.swift in Sources */,
 				0277684021A56E260002BA32 /* XMLStream.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,6 +531,7 @@
 				027768E121A5CFEE0002BA32 /* Features.swift in Sources */,
 				027768E221A5CFEE0002BA32 /* Auth.swift in Sources */,
 				027768E321A5CFEE0002BA32 /* JID.swift in Sources */,
+				02D4A81C21AB06D400298CEA /* ConnectionProtocol.swift in Sources */,
 				027768E421A5CFEE0002BA32 /* XMPP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

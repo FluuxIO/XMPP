@@ -13,6 +13,20 @@ As a result, on iOS, we target iOS version 12+.
 
 *Note*: This library is under development and not yet ready for production.
 
+## Building Fluux XMPP library
+
+We design the build system with the following principles:
+
+- The goal is to be multiplatform (iOS, MacOS, Linux), while making use of newest iOS and MacOS features.
+- We want to be flexible and easy to integrate with all major dependency management tools (SwiftPM, CocoaPods, Carthage).
+
+As such, we build the platform differently based on the target / build system:
+
+- With Carthage and Cocoapods, we use Apple Network.framework and thus target iOS 12+ and MacOS 10.14+.
+- With SwiftPM, we use Swift-NIO to be compliant with both Linux and older MacOS version.
+
+This decision allows us to keep all build system very simple, while having a good platform reach.
+
 ## Using Fluux XMPP with Carthage
 
 1. Create your project as usual in XCode.
