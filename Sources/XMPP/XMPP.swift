@@ -4,7 +4,6 @@
 //
 
 import Foundation
-import Network
 
 // TODO: Move the dependency for iOS feature to a specific file.
 #if os(iOS)
