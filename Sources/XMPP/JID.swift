@@ -79,13 +79,12 @@ extension JID {
         "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".map({ $0 })
     }()
     
-    // TODO: Use random element when moving to Swift 4.2
     static func makeResource() -> String {
         let length = 13
         var partial: [Character] = []
         
         for _ in 0 ..< length {
-            let rand = Int(arc4random_uniform(UInt32(chars.count)))
+            let rand = Int.random(in: 1...chars.count)
             partial.append(chars[rand])
         }
         
