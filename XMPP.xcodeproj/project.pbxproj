@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0277680C21A56A400002BA32 /* XMPP_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0277680221A56A400002BA32 /* XMPP_iOS.framework */; };
+		02534FAD21AE949700CEDA1B /* XMPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0277680221A56A400002BA32 /* XMPP.framework */; };
+		02534FAE21AE94E700CEDA1B /* IQEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277684921A571900002BA32 /* IQEncoderTests.swift */; };
 		0277681121A56A400002BA32 /* XMPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277681021A56A400002BA32 /* XMPPTests.swift */; };
 		0277681E21A56B100002BA32 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0277681D21A56B100002BA32 /* libxml2.2.tbd */; };
 		0277682021A56E0B0002BA32 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277681F21A56E0B0002BA32 /* Auth.swift */; };
@@ -30,7 +31,6 @@
 		0277684621A56E260002BA32 /* ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683C21A56E260002BA32 /* ConnectionError.swift */; };
 		0277684A21A571900002BA32 /* MobileProvisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277684721A571900002BA32 /* MobileProvisionTests.swift */; };
 		0277684B21A571900002BA32 /* SerializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277684821A571900002BA32 /* SerializerTests.swift */; };
-		0277684C21A571900002BA32 /* IQEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277684921A571900002BA32 /* IQEncoderTests.swift */; };
 		0277685121A571F20002BA32 /* broken-mock.mobileprovision in Resources */ = {isa = PBXBuildFile; fileRef = 0277684E21A571F20002BA32 /* broken-mock.mobileprovision */; };
 		0277685221A571F20002BA32 /* dev-mock.mobileprovision in Resources */ = {isa = PBXBuildFile; fileRef = 0277684F21A571F20002BA32 /* dev-mock.mobileprovision */; };
 		0277685321A571F20002BA32 /* prod-mock.mobileprovision in Resources */ = {isa = PBXBuildFile; fileRef = 0277685021A571F20002BA32 /* prod-mock.mobileprovision */; };
@@ -85,7 +85,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0277680221A56A400002BA32 /* XMPP_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XMPP_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0277680221A56A400002BA32 /* XMPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XMPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0277680621A56A400002BA32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0277680B21A56A400002BA32 /* XMPPTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XMPPTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0277681021A56A400002BA32 /* XMPPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMPPTests.swift; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0277680C21A56A400002BA32 /* XMPP_iOS.framework in Frameworks */,
+				02534FAD21AE949700CEDA1B /* XMPP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +172,7 @@
 		0277680321A56A400002BA32 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0277680221A56A400002BA32 /* XMPP_iOS.framework */,
+				0277680221A56A400002BA32 /* XMPP.framework */,
 				0277680B21A56A400002BA32 /* XMPPTests-iOS.xctest */,
 				027768C521A5CD520002BA32 /* libXMPP-MacOS.dylib */,
 				027768EC21A5D4180002BA32 /* XMPPTests-MacOS.xctest */,
@@ -340,7 +340,7 @@
 			);
 			name = "XMPP-iOS";
 			productName = XMPP;
-			productReference = 0277680221A56A400002BA32 /* XMPP_iOS.framework */;
+			productReference = 0277680221A56A400002BA32 /* XMPP.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		0277680A21A56A400002BA32 /* XMPPTests-iOS */ = {
@@ -502,7 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0277684C21A571900002BA32 /* IQEncoderTests.swift in Sources */,
+				02534FAE21AE94E700CEDA1B /* IQEncoderTests.swift in Sources */,
 				0277681121A56A400002BA32 /* XMPPTests.swift in Sources */,
 				0277684B21A571900002BA32 /* SerializerTests.swift in Sources */,
 				02D4A6E021A94C8200298CEA /* TestsHelpers.swift in Sources */,
@@ -616,7 +616,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -674,7 +674,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -707,7 +707,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "net.process-one.XMPP";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = XMPP;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -736,7 +736,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "net.process-one.XMPP";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = XMPP;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

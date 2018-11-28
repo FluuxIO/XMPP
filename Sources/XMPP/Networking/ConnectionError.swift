@@ -6,7 +6,7 @@
 //  Copyright © 2018 ProcessOne. All rights reserved.
 //
 
-import Network
+// import Network
 
 // TODO: Support error description
 public enum ConnectionError: Error {
