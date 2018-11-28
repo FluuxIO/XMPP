@@ -13,7 +13,7 @@ let package = Package(
     ],
     targets: [
         .systemLibrary(name: "libxml2", pkgConfig: "libxml-2.0", providers: [.brew(["libxml2"]),.apt(["libxml2-dev"])]),
-        .target(name: "XMPP", dependencies: ["libxml2", "NIO"], exclude: ["Networking/AppleOS/"]),
+        .target(name: "XMPP", dependencies: ["libxml2", "NIO"], exclude: ["Networking/Darwin/"]),
         .testTarget(name: "XMPPTests", dependencies: ["XMPP"]),
     ]
 )
