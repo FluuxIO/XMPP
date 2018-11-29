@@ -7,6 +7,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import PlistCoder
+#endif
 
 /* Decode mobileprovision plist file
 
@@ -22,7 +25,7 @@ import Foundation
  
 */
 
-struct MobileProvision: Decodable {
+struct MobileProvision: Codable {
     var name: String
     var appIDName: String
     var platform: [String]
@@ -42,7 +45,7 @@ struct MobileProvision: Decodable {
     }
     
     // Sublevel: decode entitlements informations
-    struct Entitlements: Decodable {
+    struct Entitlements: Codable {
         let keychainAccessGroups: [String]
         let getTaskAllow: Bool
         let apsEnvironment: Environment
@@ -53,7 +56,7 @@ struct MobileProvision: Decodable {
             case apsEnvironment = "aps-environment"
         }
         
-        enum Environment: String, Decodable {
+        enum Environment: String, Codable {
             case development, production, disabled
         }
         
@@ -110,8 +113,8 @@ extension MobileProvision {
 
 // TODO: Remove extension when the is a way to implement scanUpTo in a cross-platform way.
 // See: https://forums.swift.org/t/porting-code-to-linux-issue-with-scanner/18275
-extension Scanner {
-    
+fileprivate extension Scanner {
+
     func scanUpToWrap(string: String) -> String? {
         #if canImport(Darwin)
         var result: NSString?
@@ -121,5 +124,6 @@ extension Scanner {
         return scanUpToString(string)
         #endif
     }
-    
+
 }
+

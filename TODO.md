@@ -6,6 +6,9 @@
 
 ## Backlog
 
+- Autogenerate test manifest for Linux (LinuxMain.swift), with swift test --generate-linuxmain
+  References: https://oleb.net/blog/2017/03/keeping-xctest-in-sync/#swift-41-can-update-alltests-for-you
+  Example: https://github.com/apple/swift-protobuf
 - Document code (Jazzy?).
 - Detect connection loss when not receiving the replies from the keep-alive
 - Detect p1:push support before sending p1:push configuration.

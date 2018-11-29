@@ -156,6 +156,21 @@ The tests can be run with the command:
 swift test -Xswiftc "-target" -Xswiftc "x86_64-apple-macosx10.14"
 ```
 
+### Working on Linux with Docker
+
+You can use Docker official image to work on the Swift projet on Linux:
+
+```bash
+docker run  -itv $(pwd):/code --name swiftcode -w /code swift /bin/bash
+```
+
+You will then need to install `libxml2-dev` package in the container with:
+
+```bash
+apt-get update
+apt-get install libxml2-dev
+```
+
 ## TLS support
 
 At the moment the library only support standard TLS connection, not STARTTLS.

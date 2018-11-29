@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0277680121A56A400002BA32"
-               BuildableName = "XMPP_iOS.framework"
+               BuildableName = "XMPP.framework"
                BlueprintName = "XMPP-iOS"
                ReferencedContainer = "container:XMPP.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0277680121A56A400002BA32"
-            BuildableName = "XMPP_iOS.framework"
+            BuildableName = "XMPP.framework"
             BlueprintName = "XMPP-iOS"
             ReferencedContainer = "container:XMPP.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0277680121A56A400002BA32"
-            BuildableName = "XMPP_iOS.framework"
+            BuildableName = "XMPP.framework"
             BlueprintName = "XMPP-iOS"
             ReferencedContainer = "container:XMPP.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0277680121A56A400002BA32"
-            BuildableName = "XMPP_iOS.framework"
+            BuildableName = "XMPP.framework"
             BlueprintName = "XMPP-iOS"
             ReferencedContainer = "container:XMPP.xcodeproj">
          </BuildableReference>

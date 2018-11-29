@@ -255,7 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				02D4A81E21AB090600298CEA /* NIO */,
-				02D4A81D21AB077300298CEA /* AppleOS */,
+				02D4A81D21AB077300298CEA /* Darwin */,
 				0277683B21A56E260002BA32 /* StreamObserver.swift */,
 				0277683C21A56E260002BA32 /* ConnectionError.swift */,
 				02D4A81A21AB06CF00298CEA /* ConnectionProtocol.swift */,
@@ -289,12 +289,12 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		02D4A81D21AB077300298CEA /* AppleOS */ = {
+		02D4A81D21AB077300298CEA /* Darwin */ = {
 			isa = PBXGroup;
 			children = (
 				0277683A21A56E260002BA32 /* Connection.swift */,
 			);
-			path = AppleOS;
+			path = Darwin;
 			sourceTree = "<group>";
 		};
 		02D4A81E21AB090600298CEA /* NIO */ = {

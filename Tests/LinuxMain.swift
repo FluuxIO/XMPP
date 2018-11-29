@@ -1,15 +1,8 @@
-//
-//  LinuxMain.swift
-//  XMPP
-//
-//  Created by Mickaël Rémond on 26/11/2018.
-//  Copyright © 2018 ProcessOne. All rights reserved.
-//
-
 import XCTest
 
-import XMPPTestsTests
+import XMPPTests
 
 var tests = [XCTestCaseEntry]()
-tests += XMPPTestsTests.allTests()
+tests += XMPPTests.__allTests()
+
 XCTMain(tests)
