@@ -118,7 +118,7 @@ import Foundation
 import XMPP
 
 
-guard let jid = JID("mremond@localhost") else { print("Invalid JID"); exit(1) }
+guard let jid = JID("mremond@localhost/XMPPDemo") else { print("Invalid JID"); exit(1) }
 var xmppConfig = Config(jid: jid, password: "mypass", useTLS: true)
 xmppConfig.allowInsecure = true
 xmppConfig.host = "MacBook-Pro-de-Mickael.local"
