@@ -100,7 +100,7 @@ extension Connection: ChannelInboundHandler {
         // Convert channel data
         var read = unwrapInboundIn(data)
         let input = read.readBytes(length: read.readableBytes)
-        if input == nil { return }
+        guard let input = input else { return }
 
         delegate?.receive(bytes: input)
         if let string = String(bytes: input!, encoding: .utf8) {
