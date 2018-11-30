@@ -115,15 +115,16 @@ extension Connection: ChannelInboundHandler {
     // Properly shutdown on error
     // TODO: Pass the error to the client using the library
     func errorCaught(ctx: ChannelHandlerContext, error: Error) {
-        print("error: \(error)")
+        let err = ConnectionError.network("Network error: \(error)")
+        delegate?.onStateChange(State.failed(err))
         ctx.close(promise: nil)
     }
     
     // TODO: Pass the connection closed info to the client using the library
     // TODO: Pass event to client object to clean up the session
     func channelInactive(ctx: ChannelHandlerContext) {
-        print("Connection closed")
         ctx.close(promise: nil)
+        delegate?.onStateChange(State.cancelled)
     }
 }
 
