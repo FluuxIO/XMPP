@@ -61,11 +61,7 @@ final class Connection: ConnectionP {
             return
         }
         
-        if let c = nioChannel {
-            closeFuture = c.closeFuture
-            // Connection is established, calling the delegate will trigger the negociation.
-            delegate?.onStateChange(State.ready)
-        }
+        closeFuture = nioChannel?.closeFuture
     }
     
     func stop() {
@@ -81,6 +77,7 @@ final class Connection: ConnectionP {
     }
 
     func send(string: String) {
+        print("Will send string")
         guard let channel = nioChannel else { return }
 
         streamObserver?.onEvent(StreamEvent.sent(xmpp: string))
@@ -91,9 +88,10 @@ final class Connection: ConnectionP {
 extension Connection: ChannelInboundHandler {
     // When connection is established and Swift-NIO is ready,
     // prepare a new XMPPSession and XML parser for new client
-    // TODO: Remove or trigger session negotiation from there.
     func channelActive(ctx: ChannelHandlerContext) {
         print("Client connected to \(ctx.remoteAddress!)")
+        // Connection is established, calling the delegate will trigger the negociation.
+        delegate?.onStateChange(State.ready)
     }
     
     // TODO: Control packet size to prevent attack by sending an unlimited packet size
@@ -134,6 +132,7 @@ fileprivate extension Channel {
     func sendRaw(string: String) {
         var buffer = allocator.buffer(capacity: string.utf8.count)
         buffer.write(string: string)
+        print("Write and flush buffer")
         writeAndFlush(NIOAny(buffer), promise: nil)
     }
     
