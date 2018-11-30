@@ -1,6 +1,6 @@
 # Fluux XMPP
 
-Fluux XMPP is a Chat SDK for iOS, implementing XMPP protocol. XMPP is an IETF standard.
+Fluux XMPP is a Chat SDK in Swift for iOS, MacOS and Linux. It implements the XMPP protocol which is an IETF standard.
 
 Fluux XMPP is a clean slate implementation, with the following goals in mind:
 
