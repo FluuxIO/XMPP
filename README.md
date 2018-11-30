@@ -79,9 +79,18 @@ You can thus use it as follows:
 
 ## Using Swift Package
 
-You can build the lib using Swift Package Manager, thanks to the provided `Package.swift` file.
+### Install homebrew dependencies
 
-However, as we are using Apple newest `Network.framework`, you need at least MacOS 10.14 (Mojave).
+You need a libxml2 and a TLS implementation (i.e. libressl). You can install them with HomeBrew:
+
+```bash
+brew install libxml2
+brew install libressl
+```
+
+### Adding Fluux XMPP as a dependency in your project 
+
+You can build the lib using Swift Package Manager, thanks to the provided `Package.swift` file.
 
 You also need to properly set your build target to MacOS 10.12 explicitely, as, at the moment, Swift PM uses MacOS 10.10 as an 
 hardcoded value for the deployment target (more on this [here](https://oleb.net/blog/2017/04/swift-3-1-package-manager-deployment-target/)).
