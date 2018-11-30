@@ -107,7 +107,7 @@ final class Connection: ConnectionP {
             if let receivedString = String(data: d, encoding: String.Encoding.utf8) {
                 streamObserver?.onEvent(StreamEvent.received(xmpp: receivedString))
             }
-            delegate?.receive(d)
+            delegate?.receive(bytes: Array(d))
         }
         
         // Receive next data from socket

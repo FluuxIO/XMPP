@@ -11,7 +11,7 @@ import Foundation
 // This is the communication protocol between our network connection and our XMPP client facade.
 protocol ConnectionDelegate: AnyObject {
     func onStateChange(_ newState: State)
-    func receive(_ data: Data)
+    func receive(bytes: [UInt8])
 }
 
 // TODO Change name (should be Connection. Connection class should be NetworkConnection

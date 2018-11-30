@@ -173,8 +173,8 @@ public final class XMPP: ConnectionDelegate, StreamManagerDelegate {
     }
     
     // When data are received from network dispatch them to parser
-    func receive(_ data: Data) {
-        parser?.parse(data)
+    func receive(bytes: [UInt8]) {
+        parser?.parse(bytes: bytes)
     }
     
     // =====================================================================================

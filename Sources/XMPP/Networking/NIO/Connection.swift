@@ -101,12 +101,11 @@ extension Connection: ChannelInboundHandler {
         var read = unwrapInboundIn(data)
         let input = read.readBytes(length: read.readableBytes)
         if input == nil { return }
-        
+
+        delegate?.receive(input)        
         if let string = String(bytes: input!, encoding: .utf8) {
-            print("Received: \(string)")
             // Send data to parser
             streamObserver?.onEvent(StreamEvent.received(xmpp: string))
-
         } else {
             print("not a valid UTF-8 sequence")
             ctx.close(promise: nil)

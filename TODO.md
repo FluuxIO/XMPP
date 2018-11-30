@@ -1,5 +1,6 @@
 # TODO
 
+- SwiftNIO TLS Support
 - Rename PlistCoder project to XMPPFoundationCompat. It should make it clearer that the project will
   contain support for fluux XMPP support on Linux.
 - Check default port (5222 vs 5223)
