@@ -22,7 +22,7 @@ final class Connection: ConnectionP {
     let port: Int
     
     // swift-nio
-    private var nioChannel: Channel?
+    private var nioChannel: ChannelHandlerContext?
     private let evGroup: MultiThreadedEventLoopGroup
     private var closeFuture: EventLoopFuture<Void>?
     public typealias InboundIn = ByteBuffer
@@ -55,9 +55,10 @@ final class Connection: ConnectionP {
         }
         
         // Connect and wait for the connection to be ready
+        let channel: Channel?
         do {
             // TODO: Fix wait() this as we probably want to be asynchronous here:
-            nioChannel = try bootstrap.connect(host: host, port: port).wait()
+            channel = try bootstrap.connect(host: host, port: port).wait()
         } catch ChannelError.connectFailed {
             print("Connection error: connectFailed")
             let err = ConnectionError.network("connectFailed")
@@ -70,7 +71,7 @@ final class Connection: ConnectionP {
             return
         }
         
-        closeFuture = nioChannel?.closeFuture
+        closeFuture = channel?.closeFuture
     }
     
     func stop() {
@@ -108,6 +109,11 @@ fileprivate func setTLS(for channel: Channel, allowInsecure: Bool) throws {
 }
 
 extension Connection: ChannelInboundHandler {
+    
+    func channelRegistered(ctx: ChannelHandlerContext) {
+        nioChannel = ctx
+    }
+
     // When connection is established and Swift-NIO is ready,
     // prepare a new XMPPSession and XML parser for new client
     func channelActive(ctx: ChannelHandlerContext) {
@@ -148,9 +154,9 @@ extension Connection: ChannelInboundHandler {
     }
 }
 
-fileprivate extension Channel {
+fileprivate extension ChannelHandlerContext {
     func sendRaw(string: String) {
-        var buffer = allocator.buffer(capacity: string.utf8.count)
+        var buffer = channel.allocator.buffer(capacity: string.utf8.count)
         buffer.write(string: string)
         print("Write and flush buffer")
         writeAndFlush(NIOAny(buffer), promise: nil)
@@ -158,7 +164,7 @@ fileprivate extension Channel {
     
     func sendRaw(data: Data) {
         let bytes = [UInt8](data)
-        var buffer = allocator.buffer(capacity: bytes.count)
+        var buffer = channel.allocator.buffer(capacity: bytes.count)
         buffer.write(bytes: bytes)
         writeAndFlush(NIOAny(buffer), promise: nil)
     }
