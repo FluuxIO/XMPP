@@ -8,6 +8,7 @@
 
 import Foundation
 import NIO
+import NIOOpenSSL
 
 // This is the implementation for Linux and MacOS when the lib is build through SwiftPM.
 // It is not compiled with XCode, only through SwiftPM.
@@ -42,7 +43,15 @@ final class Connection: ConnectionP {
             // Enable SO_REUSEADDR.
             .channelOption(ChannelOptions.socket(SocketOptionLevel(SOL_SOCKET), SO_REUSEADDR), value: 1)
             .channelInitializer { channel in
-                channel.pipeline.add(handler: self)
+                if useTLS == true {
+                    do {
+                        try setTLS(for: channel, allowInsecure: allowInsecure)
+                    } catch let err {
+                        let err = ConnectionError.network("TLS error: \(err)")
+                        self.delegate?.onStateChange(State.failed(err))
+                    }
+                }
+                return channel.pipeline.add(handler: self)
         }
         
         // Connect and wait for the connection to be ready
@@ -83,6 +92,19 @@ final class Connection: ConnectionP {
         streamObserver?.onEvent(StreamEvent.sent(xmpp: string))
         channel.sendRaw(string: string)
     }
+}
+
+fileprivate func setTLS(for channel: Channel, allowInsecure: Bool) throws {
+    var certVerif = CertificateVerification.fullVerification
+    if allowInsecure == true {
+        certVerif = .none
+    }
+    
+    let configuration = TLSConfiguration.forClient(certificateVerification: certVerif)
+    let sslContext = try SSLContext(configuration: configuration)
+    
+    let handler = try OpenSSLClientHandler(context: sslContext)
+    _ = channel.pipeline.add(handler: handler, first: true)
 }
 
 extension Connection: ChannelInboundHandler {
