@@ -81,7 +81,7 @@ final class Connection: ConnectionP {
         case .waiting(let error):
             print("waiting error: \(error)")
             // Handle connection waiting for network
-            let networkError = ConnectionError.network(error)
+            let networkError = ConnectionError.network(error.debugDescription)
             delegate?.onStateChange(State.waiting(networkError))
         case .failed(let error):
             // Handle fatal connection error
