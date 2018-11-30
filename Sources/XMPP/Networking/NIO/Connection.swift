@@ -124,7 +124,6 @@ extension Connection: ChannelInboundHandler {
         let input = read.readBytes(length: read.readableBytes)
         guard let bytes = input else { return }
 
-        delegate?.receive(bytes: bytes)
         if let string = String(bytes: bytes, encoding: .utf8) {
             // Send data to parser
             streamObserver?.onEvent(StreamEvent.received(xmpp: string))
@@ -132,6 +131,7 @@ extension Connection: ChannelInboundHandler {
             print("not a valid UTF-8 sequence")
             ctx.close(promise: nil)
         }
+        delegate?.receive(bytes: bytes)
     }
     
     // Network error
