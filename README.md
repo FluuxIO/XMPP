@@ -83,7 +83,7 @@ You can build the lib using Swift Package Manager, thanks to the provided `Packa
 
 However, as we are using Apple newest `Network.framework`, you need at least MacOS 10.14 (Mojave).
 
-You also need to properly set your build target to MacOS 10.14 explicitely, as, at the moment, Swift PM uses MacOS 10.10 as an 
+You also need to properly set your build target to MacOS 10.12 explicitely, as, at the moment, Swift PM uses MacOS 10.10 as an 
 hardcoded value for the deployment target (more on this [here](https://oleb.net/blog/2017/04/swift-3-1-package-manager-deployment-target/)).
 
 To integrate Fluux XMPP in your Swift PM project, you can add it as a dependency of your project in your
@@ -138,7 +138,7 @@ _ = semaphore.wait(timeout: DispatchTime.distantFuture)
 Here is a typical build command you can pass to your project, to force the minimal build target to MacOS Mojave:
 
 ```bash
-swift build -Xswiftc "-target" -Xswiftc "x86_64-apple-macosx10.14"
+swift build -Xswiftc "-target" -Xswiftc "x86_64-apple-macosx10.12"
 ```
 
 You can then run your console client:
@@ -153,7 +153,7 @@ and older MacOS version. Swift-NIO is not available on iOS.
 The tests can be run with the command:
 
 ```bash
-swift test -Xswiftc "-target" -Xswiftc "x86_64-apple-macosx10.14"
+swift test -Xswiftc "-target" -Xswiftc "x86_64-apple-macosx10.12"
 ```
 
 ### Working on Linux with Docker
