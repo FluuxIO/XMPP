@@ -100,10 +100,10 @@ extension Connection: ChannelInboundHandler {
         // Convert channel data
         var read = unwrapInboundIn(data)
         let input = read.readBytes(length: read.readableBytes)
-        guard let input = input else { return }
+        guard let bytes = input else { return }
 
-        delegate?.receive(bytes: input)
-        if let string = String(bytes: input!, encoding: .utf8) {
+        delegate?.receive(bytes: bytes)
+        if let string = String(bytes: bytes, encoding: .utf8) {
             // Send data to parser
             streamObserver?.onEvent(StreamEvent.received(xmpp: string))
         } else {
