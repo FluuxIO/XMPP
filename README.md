@@ -13,6 +13,21 @@ As a result, on iOS, we target iOS version 12+.
 
 *Note*: This library is under development and not yet ready for production.
 
+## Building Fluux XMPP library
+
+We design the build system with the following principles:
+
+- The goal is to be multiplatform (iOS, MacOS, Linux), while making use of newest iOS and MacOS features.
+- We want to be flexible and easy to integrate with all major dependency management tools (SwiftPM, CocoaPods, Carthage).
+
+As such, we build the platform differently based on the target / build system:
+
+- With Carthage and Cocoapods, we use Apple Network.framework and thus target iOS 12+ and MacOS 10.14+.
+  It means that for standard iOS ou MacOS build, there is no other dependencies.
+- With SwiftPM, we use Swift-NIO to be compliant with both Linux and older MacOS version.
+
+This decision allows us to keep all build system very simple, while having a good platform reach.
+
 ## Using Fluux XMPP with Carthage
 
 1. Create your project as usual in XCode.
@@ -64,11 +79,20 @@ You can thus use it as follows:
 
 ## Using Swift Package
 
+### Install homebrew dependencies
+
+You need a libxml2 and a TLS implementation (i.e. libressl). You can install them with HomeBrew:
+
+```bash
+brew install libxml2
+brew install libressl
+```
+
+### Adding Fluux XMPP as a dependency in your project 
+
 You can build the lib using Swift Package Manager, thanks to the provided `Package.swift` file.
 
-However, as we are using Apple newest `Network.framework`, you need at least MacOS 10.14 (Mojave).
-
-You also need to properly set your build target to MacOS 10.14 explicitely, as, at the moment, Swift PM uses MacOS 10.10 as an 
+You also need to properly set your build target to MacOS 10.12 explicitely, as, at the moment, Swift PM uses MacOS 10.10 as an 
 hardcoded value for the deployment target (more on this [here](https://oleb.net/blog/2017/04/swift-3-1-package-manager-deployment-target/)).
 
 To integrate Fluux XMPP in your Swift PM project, you can add it as a dependency of your project in your
@@ -103,7 +127,7 @@ import Foundation
 import XMPP
 
 
-guard let jid = JID("mremond@localhost") else { print("Invalid JID"); exit(1) }
+guard let jid = JID("mremond@localhost/XMPPDemo") else { print("Invalid JID"); exit(1) }
 var xmppConfig = Config(jid: jid, password: "mypass", useTLS: true)
 xmppConfig.allowInsecure = true
 xmppConfig.host = "MacBook-Pro-de-Mickael.local"
@@ -123,7 +147,7 @@ _ = semaphore.wait(timeout: DispatchTime.distantFuture)
 Here is a typical build command you can pass to your project, to force the minimal build target to MacOS Mojave:
 
 ```bash
-swift build -Xswiftc "-target" -Xswiftc "x86_64-apple-macosx10.14"
+swift build -Xswiftc "-target" -Xswiftc "x86_64-apple-macosx10.12"
 ```
 
 You can then run your console client:
@@ -138,7 +162,22 @@ and older MacOS version. Swift-NIO is not available on iOS.
 The tests can be run with the command:
 
 ```bash
-swift test -Xswiftc "-target" -Xswiftc "x86_64-apple-macosx10.14"
+swift test -Xswiftc "-target" -Xswiftc "x86_64-apple-macosx10.12"
+```
+
+### Working on Linux with Docker
+
+You can use Docker official image to work on the Swift projet on Linux:
+
+```bash
+docker run  -itv $(pwd):/code --name swiftcode -w /code swift /bin/bash
+```
+
+You will then need to install `libxml2-dev` package in the container with:
+
+```bash
+apt-get update
+apt-get install libxml2-dev
 ```
 
 ## TLS support

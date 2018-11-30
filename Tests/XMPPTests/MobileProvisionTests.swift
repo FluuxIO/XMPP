@@ -12,22 +12,21 @@ import XCTest
 class MobileProvisionTests: XCTestCase {
 
     func testDecodeMobileProvision() {
-        let bundle = Bundle(for: type(of: self))
+        guard let bundle = Bundle(forTest: self) else { XCTFail("Missing init bundle"); return }
         
         // Development provisioning profile
-        var path = bundle.testPath(forResource: "dev-mock", ofType: "mobileprovision")!
+        var path = bundle.path(forResource: "dev-mock", ofType: "mobileprovision")!
         var provision = MobileProvision.read(from: path)
         XCTAssertEqual(provision?.entitlements.apsEnvironment, .development)
         
         // Production provisioning profile
-        path = bundle.testPath(forResource: "prod-mock", ofType: "mobileprovision")!
+        path = bundle.path(forResource: "prod-mock", ofType: "mobileprovision")!
         provision = MobileProvision.read(from: path)
         XCTAssertEqual(provision?.entitlements.apsEnvironment, .production)
         
         // Broken provisioning profile (with some fields removed)
-        path = bundle.testPath(forResource: "broken-mock", ofType: "mobileprovision")!
+        path = bundle.path(forResource: "broken-mock", ofType: "mobileprovision")!
         provision = MobileProvision.read(from: path)
         XCTAssertEqual(provision?.entitlements.apsEnvironment, .disabled)
     }
-    
 }

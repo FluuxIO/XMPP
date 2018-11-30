@@ -35,17 +35,16 @@ class Parser {
         parser = SAXParser(delegate: self)
     }
     
-    func parse(_ data: Data) {
-        let input = Array(data)
+    func parse(bytes: [UInt8]) {
         // Do not feed keep-alive response to parser
-        if parsingState.level == 0 && input == [13, 10, 13, 10] {
+        if parsingState.level == 0 && bytes == [13, 10, 13, 10] {
             // print("Received keep-alive response")
             return
         }
         
         // print("Parsing: \(data)")
         do {
-            try parser?.pushData(input)
+            try parser?.pushData(bytes)
         } catch {
             print("Parsing error \(error)")
         }

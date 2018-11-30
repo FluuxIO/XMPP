@@ -7,6 +7,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import PlistCoder
+#endif
 
 /* Decode mobileprovision plist file
 
@@ -22,7 +25,7 @@ import Foundation
  
 */
 
-struct MobileProvision: Decodable {
+struct MobileProvision: Codable {
     var name: String
     var appIDName: String
     var platform: [String]
@@ -42,7 +45,7 @@ struct MobileProvision: Decodable {
     }
     
     // Sublevel: decode entitlements informations
-    struct Entitlements: Decodable {
+    struct Entitlements: Codable {
         let keychainAccessGroups: [String]
         let getTaskAllow: Bool
         let apsEnvironment: Environment
@@ -53,7 +56,7 @@ struct MobileProvision: Decodable {
             case apsEnvironment = "aps-environment"
         }
         
-        enum Environment: String, Decodable {
+        enum Environment: String, Codable {
             case development, production, disabled
         }
         
@@ -90,13 +93,13 @@ extension MobileProvision {
                 
         // Skip binary part at the start of the mobile provisionning profile
         let scanner = Scanner(string: plistDataString as String)
-        guard scanner.scanUpTo("<plist", into: nil) != false else { return nil }
+        guard scanner.scanUpToWrap(string: "<plist") != nil else { return nil }
         
         // ... and extract plist until end of plist payload (skip the end binary part.
-        var extractedPlist: NSString?
-        guard scanner.scanUpTo("</plist>", into: &extractedPlist) != false else { return nil }
+        guard let extractedPlist = scanner.scanUpToWrap(string: "</plist>") else { return nil }
+
+        guard let plist = extractedPlist.appending("</plist>").data(using: .isoLatin1) else { return nil }
         
-        guard let plist = extractedPlist?.appending("</plist>").data(using: .isoLatin1) else { return nil }
         let decoder = PropertyListDecoder()
         do {
             let provision = try decoder.decode(MobileProvision.self, from: plist)
@@ -107,3 +110,20 @@ extension MobileProvision {
         }
     }
 }
+
+// TODO: Remove extension when the is a way to implement scanUpTo in a cross-platform way.
+// See: https://forums.swift.org/t/porting-code-to-linux-issue-with-scanner/18275
+fileprivate extension Scanner {
+
+    func scanUpToWrap(string: String) -> String? {
+        #if canImport(Darwin)
+        var result: NSString?
+        guard scanUpTo(string, into: &result) != false else { return nil }
+        return result as String?
+        #else
+        return scanUpToString(string)
+        #endif
+    }
+
+}
+

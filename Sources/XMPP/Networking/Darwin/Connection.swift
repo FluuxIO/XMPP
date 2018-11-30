@@ -6,14 +6,11 @@
 import Foundation
 import Network
 
-// This is the communication protocol between our network connection and our XMPP client facade.
-protocol ConnectionDelegate: AnyObject {
-    func onStateChange(_ newState: State)
-    func receive(_ data: Data)
-}
+// This is the implementation for latest AppleOS, that support Network.framework.
+// It is not compiled with SwiftPM, only with Xcode.
 
 // Provide low level networking behaviour for Fluux XMPP client.
-final class Connection {
+final class Connection: ConnectionP {
     private let endpoint: NWEndpoint
     private var conn: NWConnection?
     private let queue: DispatchQueue
@@ -84,7 +81,7 @@ final class Connection {
         case .waiting(let error):
             print("waiting error: \(error)")
             // Handle connection waiting for network
-            let networkError = ConnectionError.network(error)
+            let networkError = ConnectionError.network(error.debugDescription)
             delegate?.onStateChange(State.waiting(networkError))
         case .failed(let error):
             // Handle fatal connection error
@@ -110,7 +107,7 @@ final class Connection {
             if let receivedString = String(data: d, encoding: String.Encoding.utf8) {
                 streamObserver?.onEvent(StreamEvent.received(xmpp: receivedString))
             }
-            delegate?.receive(d)
+            delegate?.receive(bytes: Array(d))
         }
         
         // Receive next data from socket
@@ -171,3 +168,4 @@ fileprivate func getTLSParameters(allowInsecure: Bool, queue: DispatchQueue) -> 
     
     return NWParameters(tls: options)
 }
+

@@ -1,12 +1,17 @@
 # TODO
 
-- Organise tests for Swift PM, staying compliant with XCode setup.
+- Rename PlistCoder project to XMPPFoundationCompat. It should make it clearer that the project will
+  contain support for fluux XMPP support on Linux.
+- Check default port (5222 vs 5223)
+- Split XMPP file into several files / extensions
 - Test project setup with Carthage on iOS and MacOS
 - Test project setup with Cocoapods on iOS and MacOS
 
 ## Backlog
 
-- MacOS support
+- Autogenerate test manifest for Linux (LinuxMain.swift), with swift test --generate-linuxmain
+  References: https://oleb.net/blog/2017/03/keeping-xctest-in-sync/#swift-41-can-update-alltests-for-you
+  Example: https://github.com/apple/swift-protobuf
 - Document code (Jazzy?).
 - Detect connection loss when not receiving the replies from the keep-alive
 - Detect p1:push support before sending p1:push configuration.
@@ -17,7 +22,6 @@
 - Add support for optional session
 - Add roster query support.
 - End to end encryption support
-- MacOS support
 - Linux support with SwiftNIO
 - Attempt to run it on Android ?
 - Message ack
@@ -27,6 +31,9 @@
 
 # Done
 
+- SwiftNIO support, with TLS
+- MacOS support
+- Organise tests for Swift PM, staying compliant with XCode setup.
 - Test project setup with Swift PM
 - Publish in Cocoapods / test using project from Carthage
 - Bootstrap the framework to make it usable from Carthage, Cocoapod or Git submodules
