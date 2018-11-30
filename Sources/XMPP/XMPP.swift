@@ -334,10 +334,14 @@ public final class XMPP: ConnectionDelegate, StreamManagerDelegate {
         
         // 2. Bind remote session to our client resource:
         // TODO: Generate proper IQ with incremental id
-        var resource = JID.makeResource() // TODO: add a way to store the resource locally to reuse it on subsequent connection.
+        var resource: String
         if let res = config.jid.resource {
             resource = res
+        } else {
+            resource = JID.makeResource() // TODO: add a way to store the resource locally to reuse it on subsequent connection.
         }
+        
+        // 3. Send bind IQ:
         let line = "<iq type='set' id='bind1'><bind xmlns='urn:ietf:params:xml:ns:xmpp-bind'><resource>\(resource)</resource></bind></iq>"
         sendRaw(string: line)
         return .waitForBind

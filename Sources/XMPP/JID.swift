@@ -84,7 +84,7 @@ extension JID {
         var partial: [Character] = []
         
         for _ in 0 ..< length {
-            let rand = Int.random(in: 1...chars.count)
+            let rand = Int.random(in: 0..<chars.count)
             partial.append(chars[rand])
         }
         
