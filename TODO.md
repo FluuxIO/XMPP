@@ -1,5 +1,7 @@
 # TODO
 
+- Rename PlistCoder project to LinuxCompat. It should make it clearer that the project will
+  contain support for fluux XMPP support on Linux.
 - Split XMPP file into several files / extensions
 - Test project setup with Carthage on iOS and MacOS
 - Test project setup with Cocoapods on iOS and MacOS
