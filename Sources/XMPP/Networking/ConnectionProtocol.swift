@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  XMPP-iOS
+//  ConnectionProtocol.swift
+//  XMPP
 //
 //  Created by Mickaël Rémond on 25/11/2018.
 //  Copyright © 2018 ProcessOne. All rights reserved.

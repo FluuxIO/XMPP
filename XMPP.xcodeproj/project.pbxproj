@@ -121,6 +121,7 @@
 		02D4A6DE21A94C6000298CEA /* TestsHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsHelpers.swift; sourceTree = "<group>"; };
 		02D4A81A21AB06CF00298CEA /* ConnectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionProtocol.swift; sourceTree = "<group>"; };
 		02D4A81F21AB090600298CEA /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		02D9887521B12B4700DAF78E /* PropertyListCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListCoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				0277680421A56A400002BA32 /* XMPP */,
+				02D9887421B12B4700DAF78E /* PlistCoder */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -303,6 +305,14 @@
 				02D4A81F21AB090600298CEA /* Connection.swift */,
 			);
 			path = NIO;
+			sourceTree = "<group>";
+		};
+		02D9887421B12B4700DAF78E /* PlistCoder */ = {
+			isa = PBXGroup;
+			children = (
+				02D9887521B12B4700DAF78E /* PropertyListCoder.swift */,
+			);
+			path = PlistCoder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

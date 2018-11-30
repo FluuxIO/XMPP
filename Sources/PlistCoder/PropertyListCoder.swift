@@ -1,10 +1,12 @@
 //
 //  PropertyListCoder.swift
-//  ShortcutKit
+//  XMPP
 //
-//  Created by Pedro José Pereira Vieito on 26/09/2018.
-//  Copyright © 2018 Pedro José Pereira Vieito. All rights reserved.
+//  Created by Mickaël Rémond on 25/11/2018.
+//  Copyright © 2018 ProcessOne. All rights reserved.
 //
+
+// Implements PropertyList decoding on Linux, as it is not yet in CoreFoundation.
 
 #if !canImport(Darwin)
 import Foundation
