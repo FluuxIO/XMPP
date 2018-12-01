@@ -14,8 +14,7 @@ protocol ConnectionDelegate: AnyObject {
     func receive(bytes: [UInt8])
 }
 
-// TODO Change name (should be Connection. Connection class should be NetworkConnection
-protocol ConnectionP {
+protocol Connection {
     init(host: String, port: Int)
     func start(useTLS: Bool, allowInsecure: Bool)
     func stop()

@@ -69,7 +69,7 @@ public final class XMPP: ConnectionDelegate, StreamManagerDelegate {
         // Define initial state
         xmppState = .streamOpen
         // Setup networking
-        conn = Connection(host: conf.host, port: conf.port)
+        conn = config.connection
         conn.streamObserver = conf.streamObserver
         conn.delegate = self
     }

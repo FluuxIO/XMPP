@@ -1,5 +1,8 @@
 # TODO
 
+## v0.0.3
+
+- Make it possible to compile on MacOS and use either Network.framework or BSD Socket with SwiftPM.
 - Check default port (5222 vs 5223)
 - Split XMPP file into several files / extensions
 - Test project setup with Carthage on iOS and MacOS

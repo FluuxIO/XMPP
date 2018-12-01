@@ -149,7 +149,7 @@ _ = semaphore.wait(timeout: DispatchTime.distantFuture)
 Here is a typical build command you can pass to your project, to force the minimal build target to MacOS Mojave:
 
 ```bash
-swift build -Xswiftc "-target" -Xswiftc "x86_64-apple-macosx10.12"
+swift build -Xswiftc "-target" -Xswiftc "x86_64-apple-macosx10.14"
 ```
 
 You can then run your console client:
@@ -164,7 +164,7 @@ and older MacOS version. Swift-NIO is not available on iOS.
 The tests can be run with the command:
 
 ```bash
-swift test -Xswiftc "-target" -Xswiftc "x86_64-apple-macosx10.12"
+swift test -Xswiftc "-target" -Xswiftc "x86_64-apple-macosx10.14"
 ```
 
 ### Working on Linux with Docker

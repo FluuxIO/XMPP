@@ -16,8 +16,7 @@ let package = Package(
         .systemLibrary(name: "libxml2", pkgConfig: "libxml-2.0",
                        providers: [.brew(["libxml2"]),.apt(["libxml2-dev"])]),
         .target(name: "XFoundationCompat"),
-        .target(name: "XMPP", dependencies: ["libxml2", "XFoundationCompat", "NIO", "NIOOpenSSL"],
-                exclude: ["Networking/Darwin/"]),
+        .target(name: "XMPP", dependencies: ["libxml2", "XFoundationCompat", "NIO", "NIOOpenSSL"]),
         .testTarget(name: "XMPPTests", dependencies: ["XMPP"]),
     ]
 )

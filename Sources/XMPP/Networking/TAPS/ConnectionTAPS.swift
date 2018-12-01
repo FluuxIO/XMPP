@@ -3,6 +3,8 @@
 // Copyright (c) 2018 ProcessOne. All rights reserved.
 //
 
+// Cannot be built on Linux
+#if canImport(Darwin)
 import Foundation
 import Network
 
@@ -10,7 +12,7 @@ import Network
 // It is not compiled with SwiftPM, only with Xcode.
 
 // Provide low level networking behaviour for Fluux XMPP client.
-final class Connection: ConnectionP {
+final class ConnectionTAPS: Connection {
     private let endpoint: NWEndpoint
     private var conn: NWConnection?
     private let queue: DispatchQueue
@@ -168,4 +170,4 @@ fileprivate func getTLSParameters(allowInsecure: Bool, queue: DispatchQueue) -> 
     
     return NWParameters(tls: options)
 }
-
+#endif

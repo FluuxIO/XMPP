@@ -13,7 +13,7 @@ import NIOOpenSSL
 // This is the implementation for Linux and MacOS when the lib is build through SwiftPM.
 // It is not compiled with XCode, only through SwiftPM.
 
-final class Connection: ConnectionP {
+final class ConnectionNIO: Connection {
     weak var delegate: ConnectionDelegate?
     var streamObserver: StreamObserver?
     
@@ -107,7 +107,7 @@ fileprivate func setTLS(for channel: Channel, allowInsecure: Bool) throws {
     _ = channel.pipeline.add(handler: handler, first: true)
 }
 
-extension Connection: ChannelInboundHandler {
+extension ConnectionNIO: ChannelInboundHandler {
     
     func channelRegistered(ctx: ChannelHandlerContext) {
         nioChannel = ctx

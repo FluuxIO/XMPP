@@ -26,7 +26,7 @@
 		0277684121A56E260002BA32 /* IQParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683621A56E260002BA32 /* IQParser.swift */; };
 		0277684221A56E260002BA32 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683721A56E260002BA32 /* Parser.swift */; };
 		0277684321A56E260002BA32 /* JID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683821A56E260002BA32 /* JID.swift */; };
-		0277684421A56E260002BA32 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683A21A56E260002BA32 /* Connection.swift */; };
+		0277684421A56E260002BA32 /* ConnectionTAPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683A21A56E260002BA32 /* ConnectionTAPS.swift */; };
 		0277684521A56E260002BA32 /* StreamObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683B21A56E260002BA32 /* StreamObserver.swift */; };
 		0277684621A56E260002BA32 /* ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683C21A56E260002BA32 /* ConnectionError.swift */; };
 		0277684A21A571900002BA32 /* MobileProvisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277684721A571900002BA32 /* MobileProvisionTests.swift */; };
@@ -37,7 +37,7 @@
 		027768CF21A5CD730002BA32 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 027768CE21A5CD730002BA32 /* libxml2.2.tbd */; };
 		027768D121A5CFEE0002BA32 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277682621A56E170002BA32 /* Config.swift */; };
 		027768D221A5CFEE0002BA32 /* MobileProvision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277682921A56E170002BA32 /* MobileProvision.swift */; };
-		027768D321A5CFEE0002BA32 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683A21A56E260002BA32 /* Connection.swift */; };
+		027768D321A5CFEE0002BA32 /* ConnectionTAPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683A21A56E260002BA32 /* ConnectionTAPS.swift */; };
 		027768D421A5CFEE0002BA32 /* StreamObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683B21A56E260002BA32 /* StreamObserver.swift */; };
 		027768D521A5CFEE0002BA32 /* ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683C21A56E260002BA32 /* ConnectionError.swift */; };
 		027768D621A5CFEE0002BA32 /* Stanza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277683321A56E260002BA32 /* Stanza.swift */; };
@@ -63,8 +63,8 @@
 		027768FD21A5D5270002BA32 /* MobileProvisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277684721A571900002BA32 /* MobileProvisionTests.swift */; };
 		02D4A6E021A94C8200298CEA /* TestsHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4A6DE21A94C6000298CEA /* TestsHelpers.swift */; };
 		02D4A6E121A94C8200298CEA /* TestsHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4A6DE21A94C6000298CEA /* TestsHelpers.swift */; };
-		02D4A81B21AB06CF00298CEA /* ConnectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4A81A21AB06CF00298CEA /* ConnectionProtocol.swift */; };
-		02D4A81C21AB06D400298CEA /* ConnectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4A81A21AB06CF00298CEA /* ConnectionProtocol.swift */; };
+		02D4A81B21AB06CF00298CEA /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4A81A21AB06CF00298CEA /* Connection.swift */; };
+		02D4A81C21AB06D400298CEA /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4A81A21AB06CF00298CEA /* Connection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,7 +106,7 @@
 		0277683621A56E260002BA32 /* IQParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQParser.swift; sourceTree = "<group>"; };
 		0277683721A56E260002BA32 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		0277683821A56E260002BA32 /* JID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JID.swift; sourceTree = "<group>"; };
-		0277683A21A56E260002BA32 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		0277683A21A56E260002BA32 /* ConnectionTAPS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionTAPS.swift; sourceTree = "<group>"; };
 		0277683B21A56E260002BA32 /* StreamObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamObserver.swift; sourceTree = "<group>"; };
 		0277683C21A56E260002BA32 /* ConnectionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionError.swift; sourceTree = "<group>"; };
 		0277684721A571900002BA32 /* MobileProvisionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileProvisionTests.swift; sourceTree = "<group>"; };
@@ -119,8 +119,8 @@
 		027768CE21A5CD730002BA32 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/lib/libxml2.2.tbd; sourceTree = DEVELOPER_DIR; };
 		027768EC21A5D4180002BA32 /* XMPPTests-MacOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XMPPTests-MacOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D4A6DE21A94C6000298CEA /* TestsHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsHelpers.swift; sourceTree = "<group>"; };
-		02D4A81A21AB06CF00298CEA /* ConnectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionProtocol.swift; sourceTree = "<group>"; };
-		02D4A81F21AB090600298CEA /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		02D4A81A21AB06CF00298CEA /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		02D4A81F21AB090600298CEA /* ConnectionNIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionNIO.swift; sourceTree = "<group>"; };
 		02D9887521B12B4700DAF78E /* PropertyListCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListCoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -255,11 +255,11 @@
 		0277683921A56E260002BA32 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				02D4A81E21AB090600298CEA /* NIO */,
-				02D4A81D21AB077300298CEA /* Darwin */,
+				02D4A81E21AB090600298CEA /* BSDSocket */,
+				02D4A81D21AB077300298CEA /* TAPS */,
 				0277683B21A56E260002BA32 /* StreamObserver.swift */,
 				0277683C21A56E260002BA32 /* ConnectionError.swift */,
-				02D4A81A21AB06CF00298CEA /* ConnectionProtocol.swift */,
+				02D4A81A21AB06CF00298CEA /* Connection.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -291,20 +291,20 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		02D4A81D21AB077300298CEA /* Darwin */ = {
+		02D4A81D21AB077300298CEA /* TAPS */ = {
 			isa = PBXGroup;
 			children = (
-				0277683A21A56E260002BA32 /* Connection.swift */,
+				0277683A21A56E260002BA32 /* ConnectionTAPS.swift */,
 			);
-			path = Darwin;
+			path = TAPS;
 			sourceTree = "<group>";
 		};
-		02D4A81E21AB090600298CEA /* NIO */ = {
+		02D4A81E21AB090600298CEA /* BSDSocket */ = {
 			isa = PBXGroup;
 			children = (
-				02D4A81F21AB090600298CEA /* Connection.swift */,
+				02D4A81F21AB090600298CEA /* ConnectionNIO.swift */,
 			);
-			path = NIO;
+			path = BSDSocket;
 			sourceTree = "<group>";
 		};
 		02D9887421B12B4700DAF78E /* XFoundationCompat */ = {
@@ -499,11 +499,11 @@
 				0277682F21A56E170002BA32 /* Features.swift in Sources */,
 				0277683D21A56E260002BA32 /* XMPP.swift in Sources */,
 				0277682021A56E0B0002BA32 /* Auth.swift in Sources */,
-				0277684421A56E260002BA32 /* Connection.swift in Sources */,
+				0277684421A56E260002BA32 /* ConnectionTAPS.swift in Sources */,
 				0277682A21A56E170002BA32 /* Message.swift in Sources */,
 				0277682B21A56E170002BA32 /* Encoder.swift in Sources */,
 				0277682E21A56E170002BA32 /* Config.swift in Sources */,
-				02D4A81B21AB06CF00298CEA /* ConnectionProtocol.swift in Sources */,
+				02D4A81B21AB06CF00298CEA /* Connection.swift in Sources */,
 				0277684021A56E260002BA32 /* XMLStream.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,7 +526,7 @@
 			files = (
 				027768D121A5CFEE0002BA32 /* Config.swift in Sources */,
 				027768D221A5CFEE0002BA32 /* MobileProvision.swift in Sources */,
-				027768D321A5CFEE0002BA32 /* Connection.swift in Sources */,
+				027768D321A5CFEE0002BA32 /* ConnectionTAPS.swift in Sources */,
 				027768D421A5CFEE0002BA32 /* StreamObserver.swift in Sources */,
 				027768D521A5CFEE0002BA32 /* ConnectionError.swift in Sources */,
 				027768D621A5CFEE0002BA32 /* Stanza.swift in Sources */,
@@ -541,7 +541,7 @@
 				027768E121A5CFEE0002BA32 /* Features.swift in Sources */,
 				027768E221A5CFEE0002BA32 /* Auth.swift in Sources */,
 				027768E321A5CFEE0002BA32 /* JID.swift in Sources */,
-				02D4A81C21AB06D400298CEA /* ConnectionProtocol.swift in Sources */,
+				02D4A81C21AB06D400298CEA /* Connection.swift in Sources */,
 				027768E421A5CFEE0002BA32 /* XMPP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
