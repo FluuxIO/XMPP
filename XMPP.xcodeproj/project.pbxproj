@@ -65,6 +65,7 @@
 		02D4A6E121A94C8200298CEA /* TestsHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4A6DE21A94C6000298CEA /* TestsHelpers.swift */; };
 		02D4A81B21AB06CF00298CEA /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4A81A21AB06CF00298CEA /* Connection.swift */; };
 		02D4A81C21AB06D400298CEA /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4A81A21AB06CF00298CEA /* Connection.swift */; };
+		02D9887721B2E7C500DAF78E /* XMPP+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D9887621B2E7C500DAF78E /* XMPP+CustomStringConvertible.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		02D4A81A21AB06CF00298CEA /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		02D4A81F21AB090600298CEA /* ConnectionNIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionNIO.swift; sourceTree = "<group>"; };
 		02D9887521B12B4700DAF78E /* PropertyListCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListCoder.swift; sourceTree = "<group>"; };
+		02D9887621B2E7C500DAF78E /* XMPP+CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XMPP+CustomStringConvertible.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				0277681F21A56E0B0002BA32 /* Auth.swift */,
 				0277683821A56E260002BA32 /* JID.swift */,
 				0277683121A56E260002BA32 /* XMPP.swift */,
+				02D9887621B2E7C500DAF78E /* XMPP+CustomStringConvertible.swift */,
 			);
 			path = XMPP;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 				0277684221A56E260002BA32 /* Parser.swift in Sources */,
 				0277682F21A56E170002BA32 /* Features.swift in Sources */,
 				0277683D21A56E260002BA32 /* XMPP.swift in Sources */,
+				02D9887721B2E7C500DAF78E /* XMPP+CustomStringConvertible.swift in Sources */,
 				0277682021A56E0B0002BA32 /* Auth.swift in Sources */,
 				0277684421A56E260002BA32 /* ConnectionTAPS.swift in Sources */,
 				0277682A21A56E170002BA32 /* Message.swift in Sources */,

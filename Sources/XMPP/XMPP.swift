@@ -45,7 +45,7 @@ public final class XMPP: ConnectionDelegate, StreamManagerDelegate {
     var features: Features
 
     // Delegation
-    private var conn: Connection
+    var conn: Connection
     private var parser: Parser?
 
     // XMPP Workflow states

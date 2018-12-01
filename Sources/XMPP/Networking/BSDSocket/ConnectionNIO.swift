@@ -166,3 +166,9 @@ fileprivate extension ChannelHandlerContext {
         writeAndFlush(NIOAny(buffer), promise: nil)
     }
 }
+
+extension ConnectionNIO: CustomStringConvertible {
+    public var description: String {
+        return "NIO"
+    }
+}

@@ -170,4 +170,10 @@ fileprivate func getTLSParameters(allowInsecure: Bool, queue: DispatchQueue) -> 
     
     return NWParameters(tls: options)
 }
+
+extension ConnectionTAPS: CustomStringConvertible {
+    public var description: String {
+        return "Transport Services"
+    }
+}
 #endif
