@@ -49,18 +49,4 @@ public struct Config {
         
         //  - ConnectTimeout
     }
-    
-    private var _connection: Connection?
-    var connection: Connection {
-        get {
-            #if !canImport(Darwin)
-            return ConnectionNIO(host: host, port: port)
-            #else
-            if let conn = _connection {
-                return conn
-            }
-            return ConnectionTAPS(host: host, port: port)
-            #endif
-        }
     }
-}

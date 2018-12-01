@@ -13,7 +13,7 @@ import NIOOpenSSL
 // This is the implementation for Linux and MacOS when the lib is build through SwiftPM.
 // It is not compiled with XCode, only through SwiftPM.
 
-public final class ConnectionNIO: Connection {
+final class ConnectionNIO: Connection {
     weak var delegate: ConnectionDelegate?
     var streamObserver: StreamObserver?
     
