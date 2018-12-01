@@ -9,7 +9,9 @@ Fluux XMPP is a clean slate implementation, with the following goals in mind:
 - Focus on maintainability. XMPP is a complex protocol and maintainability should be the main criteria for design decision to be able to be sustainable in the long term. For the same reason, we also aim at limiting the dependencies as much as possible.
 - Focus on efficiency and scalability, leveraging only part of the XMPP protocol that are scalable. Many XEPs are too consuming to be used on large scale on production.
 
-As a result, on iOS, we target iOS version 12+.
+As a result, on iOS, we target iOS version 12+. On MacOS, we focus on Mojave (10.14), but it should work down to version
+10.12, using SwiftNIO. On Linux, we use BSD Socket with SwiftNIO, so it should work quite broadly, as long as you have Swift 4.2
+installed.
 
 *Note*: This library is under development and not yet ready for production.
 
