@@ -12,7 +12,7 @@ import Network
 // It is not compiled with SwiftPM, only with Xcode.
 
 // Provide low level networking behaviour for Fluux XMPP client.
-final class ConnectionTAPS: Connection {
+public final class ConnectionTAPS: Connection {
     private let endpoint: NWEndpoint
     private var conn: NWConnection?
     private let queue: DispatchQueue
