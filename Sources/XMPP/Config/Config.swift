@@ -25,7 +25,7 @@ public struct Config {
     
     public var debug: Bool = false
     // public var initialPresence: Presence? = Presence()
-
+    
     public var pushToken: String?
     
     // Possible options:
@@ -46,14 +46,19 @@ public struct Config {
         }
 
         host = jid.server
+        
         //  - ConnectTimeout
     }
     
+    private var _connection: Connection?
     var connection: Connection {
         get {
             #if !canImport(Darwin)
             return ConnectionNIO(host: host, port: port)
             #else
+            if let conn = _connection {
+                return conn
+            }
             return ConnectionTAPS(host: host, port: port)
             #endif
         }
