@@ -8,7 +8,7 @@
 
 import Foundation
 #if os(Linux)
-import PlistCoder
+import XFoundationCompat
 #endif
 
 /* Decode mobileprovision plist file

@@ -1,7 +1,5 @@
 # TODO
 
-- Rename PlistCoder project to XMPPFoundationCompat. It should make it clearer that the project will
-  contain support for fluux XMPP support on Linux.
 - Check default port (5222 vs 5223)
 - Split XMPP file into several files / extensions
 - Test project setup with Carthage on iOS and MacOS
@@ -30,9 +28,10 @@
 
 # Done
 
+- Linux support with additional Foundation compatibility code
 - SwiftNIO support, with TLS
 - MacOS support
-- Organise tests for Swift PM, staying compliant with XCode setup.
+- Organise tests for Swift PM, staying compliant with XCode setup
 - Test project setup with Swift PM
 - Publish in Cocoapods / test using project from Carthage
 - Bootstrap the framework to make it usable from Carthage, Cocoapod or Git submodules

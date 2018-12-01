@@ -278,7 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				0277680421A56A400002BA32 /* XMPP */,
-				02D9887421B12B4700DAF78E /* PlistCoder */,
+				02D9887421B12B4700DAF78E /* XFoundationCompat */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -307,12 +307,12 @@
 			path = NIO;
 			sourceTree = "<group>";
 		};
-		02D9887421B12B4700DAF78E /* PlistCoder */ = {
+		02D9887421B12B4700DAF78E /* XFoundationCompat */ = {
 			isa = PBXGroup;
 			children = (
 				02D9887521B12B4700DAF78E /* PropertyListCoder.swift */,
 			);
-			path = PlistCoder;
+			path = XFoundationCompat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
