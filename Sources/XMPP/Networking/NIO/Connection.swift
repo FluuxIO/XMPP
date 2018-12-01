@@ -87,7 +87,6 @@ final class Connection: ConnectionP {
     }
 
     func send(string: String) {
-        print("Will send string")
         guard let channel = nioChannel else { return }
 
         streamObserver?.onEvent(StreamEvent.sent(xmpp: string))
@@ -117,7 +116,6 @@ extension Connection: ChannelInboundHandler {
     // When connection is established and Swift-NIO is ready,
     // prepare a new XMPPSession and XML parser for new client
     func channelActive(ctx: ChannelHandlerContext) {
-        print("Client connected to \(ctx.remoteAddress!)")
         // Connection is established, calling the delegate will trigger the negociation.
         delegate?.onStateChange(State.ready)
     }
@@ -158,7 +156,6 @@ fileprivate extension ChannelHandlerContext {
     func sendRaw(string: String) {
         var buffer = channel.allocator.buffer(capacity: string.utf8.count)
         buffer.write(string: string)
-        print("Write and flush buffer")
         writeAndFlush(NIOAny(buffer), promise: nil)
     }
     

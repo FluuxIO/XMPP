@@ -182,7 +182,6 @@ public final class XMPP: ConnectionDelegate, StreamManagerDelegate {
 
     // TODO: Support for fast open (stream open with initial SYN) ?
     func openStream() {
-        print("In open stream")
         let openStream = "<?xml version='1.0'?><stream:stream to='\(config.jid.server)' xmlns='jabber:client' xmlns:stream='http://etherx.jabber.org/streams' version='1.0'>"
         sendRaw(string: openStream)
     }

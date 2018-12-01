@@ -22,7 +22,6 @@
 - Add support for optional session
 - Add roster query support.
 - End to end encryption support
-- Linux support with SwiftNIO
 - Attempt to run it on Android ?
 - Message ack
 - Persistent outgoing message queue to accumulate when there is no network
