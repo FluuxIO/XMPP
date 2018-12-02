@@ -13,7 +13,7 @@ As a result, on iOS, we target iOS version 12+. On MacOS, we focus on Mojave (10
 10.12, using SwiftNIO. On Linux, we use BSD Socket with SwiftNIO, so it should work quite broadly, as long as you have Swift 4.2
 installed.
 
-*Note*: This library is under development and not yet ready for production.
+*Note*: This library is under very active development and not yet ready for production.
 
 ## Building Fluux XMPP library
 
