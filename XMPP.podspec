@@ -18,9 +18,9 @@ Pod::Spec.new do |s|
   s.compiler_flags = '-whole-module-optimization'
 
   s.source = { git: "https://github.com/FluuxIO/XMPP.git", tag: "v#{s.version}", :submodules => true }
-  s.source_files = "Sources/XMPP/**/*.{h,swift}"
-  s.exclude_files = "Sources/XMPP/Networking/BSDSocket/*'
-
+  s.source_files  = "Sources/XMPP/**/*.{h,swift}"
+  s.exclude_files = "Sources/XMPP/Networking/BSDSocket/*.swift"
+ 
   s.library      = 'xml2'
   s.xcconfig     = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2'}
 end
