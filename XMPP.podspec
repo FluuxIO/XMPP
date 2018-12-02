@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "XMPP"
-  s.version = "0.0.1"
+  s.version = "0.0.3"
   s.summary = "Pure Swift XMPP library"
   s.homepage = "https://github.com/FluuxIO/XMPP"
   s.license = { type: 'Apache 2.0', file: 'LICENSE' }
