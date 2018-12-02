@@ -1,15 +1,14 @@
 # TODO
 
-## v0.0.3
+## v0.0.4
 
-- Make it possible to compile on MacOS and use either Network.framework or BSD Socket with SwiftPM.
-- Check default port (5222 vs 5223)
+- Write test iOS client showing data on stream + allowing sending XMPP packets
 - Split XMPP file into several files / extensions
-- Test project setup with Carthage on iOS and MacOS
-- Test project setup with Cocoapods on iOS and MacOS
 
 ## Backlog
 
+- Check default port (5222 vs 5223)
+- Make it possible to compile on MacOS and use either Network.framework or BSD Socket with SwiftPM.
 - Autogenerate test manifest for Linux (LinuxMain.swift), with swift test --generate-linuxmain
   References: https://oleb.net/blog/2017/03/keeping-xctest-in-sync/#swift-41-can-update-alltests-for-you
   Example: https://github.com/apple/swift-protobuf
