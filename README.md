@@ -26,7 +26,7 @@ As such, we build the platform differently based on the target / build system:
 
 - With Carthage and Cocoapods, we use Apple Network.framework and thus target iOS 12+ and MacOS 10.14+.
   It means that for standard iOS ou MacOS build, there is no other dependencies.
-- With SwiftPM, we use Swift-NIO to be compliant with both Linux and older MacOS version.
+- With SwiftPM, we use Swift-NIO to be compliant with both Linux and older MacOS version (10.12+).
 
 This decision allows us to keep all build system very simple, while having a good platform reach.
 
