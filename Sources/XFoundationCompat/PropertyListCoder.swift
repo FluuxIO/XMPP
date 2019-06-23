@@ -2,8 +2,8 @@
 //  PropertyListCoder.swift
 //  XMPP
 //
-//  Created by Mickaël Rémond on 25/11/2018.
-//  Copyright © 2018 ProcessOne. All rights reserved.
+//  Created by Mickaël Rémond on 2018-11-25.
+//  Copyright © 2018-2019 ProcessOne. All rights reserved.
 //
 
 // Implements PropertyList decoding on Linux, as it is not yet in CoreFoundation.

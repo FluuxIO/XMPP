@@ -1,6 +1,9 @@
 //
-// Created by Mickaël Rémond on 2018-10-18.
-// Copyright (c) 2018 ProcessOne. All rights reserved.
+//  XMPP.swift
+//  XMPP
+//
+//  Created by Mickaël Rémond on 2018-10-18.
+//  Copyright © 2018-2019 ProcessOne. All rights reserved.
 //
 
 import Foundation

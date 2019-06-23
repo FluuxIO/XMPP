@@ -2,8 +2,8 @@
 //  PresenceEncoder.swift
 //  XMPP
 //
-//  Created by Mickaël Rémond on 31/10/2018.
-//  Copyright © 2018 ProcessOne. All rights reserved.
+//  Created by Mickaël Rémond on 2018-10-31.
+//  Copyright © 2018-2019 ProcessOne. All rights reserved.
 //
 
 // TODO: Add support for generating default id on Node class (for nodes that do

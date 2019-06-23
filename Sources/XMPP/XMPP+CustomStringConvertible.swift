@@ -1,9 +1,9 @@
 //
 //  XMPP+CustomStringConvertible.swift
-//  XMPP-iOS
+//  XMPP
 //
-//  Created by Mickaël Rémond on 01/12/2018.
-//  Copyright © 2018 ProcessOne. All rights reserved.
+//  Created by Mickaël Rémond on 2018-12-01.
+//  Copyright © 2018-2019 ProcessOne. All rights reserved.
 //
 
 extension XMPP: CustomStringConvertible {

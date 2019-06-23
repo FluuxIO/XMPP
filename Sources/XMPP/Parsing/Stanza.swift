@@ -1,9 +1,9 @@
 //
-//  Node.swift
+//  Stanza.swift
 //  XMPP
 //
-//  Created by Mickaël Rémond on 19/10/2018.
-//  Copyright © 2018 ProcessOne. All rights reserved.
+//  Created by Mickaël Rémond on 2018-10-19.
+//  Copyright © 2018-2019 ProcessOne. All rights reserved.
 //
 
 import Foundation

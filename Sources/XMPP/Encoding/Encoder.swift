@@ -2,8 +2,8 @@
 //  Encoder.swift
 //  XMPP
 //
-//  Created by Mickaël Rémond on 21/10/2018.
-//  Copyright © 2018 ProcessOne. All rights reserved.
+//  Created by Mickaël Rémond on 2018-10-21.
+//  Copyright © 2018-2019 ProcessOne. All rights reserved.
 //
 
 // Encode a stanza into an XMPP packet.
