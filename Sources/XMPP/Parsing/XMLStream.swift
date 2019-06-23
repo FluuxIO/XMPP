@@ -71,8 +71,6 @@ func fromContext<A: AnyObject>(_ type: A.Type, _ context: UnsafeMutableRawPointe
     return Unmanaged<A>.fromOpaque(context).takeUnretainedValue()
 }
 
-//xmlTextReaderGetParserColumnNumber
-
 public class XMLStream {
     public enum NodeType: Int {
         case none = 0, element, attribute, text, cdata, entityReference,
@@ -88,6 +86,7 @@ public class XMLStream {
     
     var dataProvider: XMLStreamDataProvider
     var readerPtr: xmlTextReaderPtr?
+    
     public init(provider: XMLStreamDataProvider) {
         dataProvider = provider
     }
@@ -96,6 +95,7 @@ public class XMLStream {
             xmlFreeTextReader(r)
         }
     }
+    
     private func getReaderPtr() throws -> xmlTextReaderPtr {
         if let r = readerPtr {
             return r
@@ -111,7 +111,7 @@ public class XMLStream {
                     return 0
                 }
                 _ = data.withUnsafeBytes {
-                    memcpy(buffer, $0, data.count)
+                    memcpy(buffer, $0.bindMemory(to: UInt8.self).baseAddress!, data.count)
                 }
                 return Int32(data.count)
             } catch {
@@ -151,6 +151,7 @@ public class XMLStream {
             return NodeDescriptor(reader)
         }
     }
+    
     public func nextSibling() throws -> NodeDescriptor? {
         let reader = try getReaderPtr()
         let readRes = xmlTextReaderNext(reader)
@@ -163,6 +164,7 @@ public class XMLStream {
             return NodeDescriptor(reader)
         }
     }
+    
     public func namespaceURI(prefix: String) -> String? {
         return String(xmlTextReaderLookupNamespace(readerPtr, prefix))
     }
