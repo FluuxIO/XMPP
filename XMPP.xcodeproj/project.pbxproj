@@ -421,10 +421,11 @@
 				TargetAttributes = {
 					0277680121A56A400002BA32 = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1100;
 					};
 					0277680A21A56A400002BA32 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1100;
 					};
 					027768C421A5CD520002BA32 = {
 						CreatedOnToolsVersion = 10.1;
@@ -440,6 +441,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 027767F821A56A400002BA32;
 			productRefGroup = 0277680321A56A400002BA32 /* Products */;
@@ -724,7 +726,7 @@
 				PRODUCT_NAME = XMPP;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -752,7 +754,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "net.process-one.XMPP";
 				PRODUCT_NAME = XMPP;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -771,7 +773,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "net.process-one.XMPPTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -790,7 +792,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "net.process-one.XMPPTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
