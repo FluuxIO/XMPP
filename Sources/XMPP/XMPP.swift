@@ -191,7 +191,7 @@ public final class XMPP: ConnectionDelegate, StreamManagerDelegate {
     
     // Receive parsed data from Parser
     func processEvent(_ stanza: Stanza) {
-        //print("Process Even node: \(stanza)")
+        //print("Process Event node: \(stanza)")
         // TODO: catch error to pass them to client using the library
         switch xmppState {
         case .streamOpen:
