@@ -12,7 +12,6 @@ import Foundation
 import Network
 
 // This is the implementation for latest AppleOS, that support Network.framework.
-// It is not compiled with SwiftPM, only with Xcode.
 
 // Provide low level networking behaviour for Fluux XMPP client.
 final class ConnectionTAPS: Connection {
