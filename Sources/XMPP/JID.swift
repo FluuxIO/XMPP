@@ -66,7 +66,7 @@ public struct JID {
     }
 }
 
-// JID extensions
+// MARK: JID extensions
 
 extension JID: CustomStringConvertible {
     public var description: String {
