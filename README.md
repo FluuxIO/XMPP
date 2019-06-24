@@ -122,7 +122,7 @@ let package = Package(
 )
 ```
 
-You can modify your command line executable to start a XMPP client. For example:
+You can modify your command-line executable `main.swift` to start an XMPP client. For example:
 
 ```swift
 import Foundation
