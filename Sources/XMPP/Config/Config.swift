@@ -52,7 +52,7 @@ public struct Config {
     
     var connection: Connection {
         get {
-            #if !canImport(Darwin)
+            #if os(Linux)
             return ConnectionNIO(host: host, port: port)
             #else
             return ConnectionTAPS(host: host, port: port)

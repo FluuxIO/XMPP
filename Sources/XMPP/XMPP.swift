@@ -393,6 +393,7 @@ public final class XMPP: ConnectionDelegate, StreamManagerDelegate {
     }
 
     // Setup timer for keep-alive
+    @available(OSX 10.12, *)
     func setTimer() {
         keepAliveTimer?.invalidate()
         DispatchQueue.main.async {

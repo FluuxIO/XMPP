@@ -9,21 +9,23 @@
 import XCTest
 import Foundation
 
-extension Bundle {
+// Helper to access test data from XCode 11. Bundle are not supported with SwiftPM.
+struct Resource {
+    let url: URL
+    
+    init(name: String, ofType: String) throws {
+        let testFileURL = URL(fileURLWithPath: "\(#file)", isDirectory: false)
+        let testDirURL = testFileURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("XMPPTests/TestData", isDirectory: true)
 
-    convenience init?(forTest testClass: XCTestCase) {
-        if isRunningXCTest() {
-            self.init(for: type(of: testClass))
-        } else {
-            let fileManager = FileManager.default
-            let path = fileManager.currentDirectoryPath
-            self.init(path: "\(path)/Tests/XMPPTests/TestData")
+        self.url = testDirURL.appendingPathComponent("\(name).\(ofType)", isDirectory: false)
+    }
+    
+    var path: String {
+        get {
+            return self.url.path
         }
     }
-}
-
-// Return true if running in XCode (and thus will have access to test bundle)
-// or false of running in Swift
-fileprivate func isRunningXCTest() -> Bool {
-    return ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil
 }

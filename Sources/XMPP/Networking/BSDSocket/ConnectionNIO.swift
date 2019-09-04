@@ -6,6 +6,7 @@
 //  Copyright © 2018-2019 ProcessOne. All rights reserved.
 //
 
+#if os(Linux)
 import Foundation
 import NIO
 import NIOOpenSSL
@@ -172,3 +173,4 @@ extension ConnectionNIO: CustomStringConvertible {
         return "NIO"
     }
 }
+#endif

@@ -32,7 +32,7 @@ extension XMPPTests {
     ]
 }
 
-#if !os(macOS)
+#if os(Linux)
 public func __allTests() -> [XCTestCaseEntry] {
     return [
         testCase(IQEncoderTests.__allTests),
