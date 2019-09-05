@@ -12,4 +12,3 @@
 #include <libxml2/libxml/SAX2.h>
 
 #endif
-
