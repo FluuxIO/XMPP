@@ -31,6 +31,7 @@ XMPP.xcodeproj/xcuserdata/*.xcuserdatad/
 # Swift Package Manager
 Packages/
 .build/
+.swiftpm/
 
 # Carthage
 Carthage/Build
