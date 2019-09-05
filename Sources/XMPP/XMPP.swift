@@ -376,6 +376,7 @@ public final class XMPP: ConnectionDelegate, StreamManagerDelegate {
             pushPayload.enablePush(type: .apns, token: token)
         }
         let iq = IQ(type: .set)
+        // TODO: Only support push if the feature is advertised by the server.
         iq.addPayload(node: pushPayload)
 
         do {
