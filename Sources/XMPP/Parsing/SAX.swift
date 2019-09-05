@@ -5,7 +5,7 @@
 //  Created by Kyle Jessup on 2018-03-13.
 //
 
-import libxml2
+import CXML
 
 public struct SAXError: Error {
     public let description: String
