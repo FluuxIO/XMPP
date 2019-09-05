@@ -15,8 +15,6 @@ let package = Package(
     
     products: [
         .library(name: "XMPP", targets: ["XMPP"]),
-        // Needed for Linux
-        //.library(name: "PlistCoder", targets: ["XFoundationCompat"]),
         .executable(name: "XMPPDemo", targets: ["XMPPDemo"]),
     ],
     
@@ -26,14 +24,17 @@ let package = Package(
     ],
     
     targets: [
-        //.systemLibrary(name: "libxml2", pkgConfig: "libxml-2.0",
-        //               providers: [.brew(["libxml2"]),
-        //                           .apt(["libxml2-dev"])]),
-        .target(name: "XFoundationCompat"),
+        // Dependencies
         .target(name: "CXML",
                 dependencies: [],
+                //cSettings: [.headerSearchPath("Sources/CXML")],
                 linkerSettings: [.linkedLibrary("xml2")]),
+        .target(name: "XFoundationCompat"),
+
+        // Core lib
         .target(name: "XMPP", dependencies: ["NIO", "NIOSSL", "XFoundationCompat", "CXML"]),
+
+        // Demo and tests
         .target(name: "XMPPDemo", dependencies: ["XMPP"]),
         .testTarget(name: "XMPPTests", dependencies: ["XMPP"]),
     ]

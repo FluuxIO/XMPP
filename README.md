@@ -102,7 +102,7 @@ _ = semaphore.wait(timeout: DispatchTime.distantFuture)
 To build the project, you can just use the standard build command:
 
 ```bash
-swift build
+swift build -Xcc -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/libxml2
 ```
 
 You can then run your console client:
@@ -144,7 +144,7 @@ apt-get install libxml2-dev libssl-dev
 From the Docker shell, you can build the code with:
 
 ```
-swift build
+swift build -Xcc -I/usr/include/libxml2
 ```
 
 ## TLS support

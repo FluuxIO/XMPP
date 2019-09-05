@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import libxml2
+import CXML
 
 public protocol XMLStreamDataProvider {
     mutating func getData(maxCount: Int) throws -> Data?
