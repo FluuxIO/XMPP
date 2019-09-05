@@ -1,3 +1,3 @@
 # libxml2
 
-This is a system target for Swift package.
+This is a wrapper for support of libxml2 with Swift Package.

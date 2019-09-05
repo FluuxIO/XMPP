@@ -10,7 +10,7 @@ let package = Package(
         .macOS(.v10_14),
         .iOS(.v12),
         .tvOS(.v12),
-        // .watchOS(.v6)
+        // for 5.1: .watchOS(.v6)
     ],
     
     products: [
@@ -27,7 +27,7 @@ let package = Package(
         // Dependencies
         .target(name: "CXML",
                 dependencies: [],
-                cSettings: [.headerSearchPath("deps/libxml2/")],
+                //cSettings: [.headerSearchPath("deps/libxml2/")],
                 linkerSettings: [.linkedLibrary("xml2")]),
         .target(name: "XFoundationCompat"),
 

@@ -102,7 +102,6 @@ _ = semaphore.wait(timeout: DispatchTime.distantFuture)
 To build the project, you can just use the standard build command:
 
 ```bash
-swift build -Xcc -Ideps/libxml2
 swift build -Xcc -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/libxml2
 ```
 
