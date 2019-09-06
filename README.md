@@ -144,7 +144,6 @@ apt-get install libxml2-dev libssl-dev
 From the Docker shell, you can build the code with:
 
 ```
-swift build -Xcc -Ideps/libxml2
 swift build -Xcc -I/usr/include/libxml2
 ```
 
