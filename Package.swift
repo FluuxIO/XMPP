@@ -27,7 +27,7 @@ let package = Package(
         // Dependencies
         .target(name: "CXML",
                 dependencies: [],
-                //cSettings: [.headerSearchPath("deps/libxml2/")],
+                //cSettings: [.headerSearchPath("deps/")],
                 linkerSettings: [.linkedLibrary("xml2")]),
         .target(name: "XFoundationCompat"),
 
