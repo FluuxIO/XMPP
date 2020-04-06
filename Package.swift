@@ -24,11 +24,8 @@ let package = Package(
     ],
     
     targets: [
-        // Dependencies
-        .target(name: "XFoundationCompat"),
-
         // Core lib
-        .target(name: "XMPP", dependencies: ["NIO", "NIOSSL", "XFoundationCompat"]),
+        .target(name: "XMPP", dependencies: ["NIO", "NIOSSL"]),
 
         // Demo and tests
         .target(name: "XMPPDemo", dependencies: ["XMPP"]),

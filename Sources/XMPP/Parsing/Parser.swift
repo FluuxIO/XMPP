@@ -8,6 +8,10 @@
 
 import Foundation
 
+#if os(Linux)
+import FoundationXML
+#endif
+
 typealias dispatcher = (Stanza) -> Void
 
 struct ParsingState {
@@ -44,7 +48,7 @@ final class SAXDelegate: NSObject, XMLParserDelegate {
     }
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
-        print("Did start element: \(elementName) \(namespaceURI) \(qName) \(attributeDict)")
+        print("Did start element: \(elementName) \(namespaceURI ?? "") \(qName ?? "") \(attributeDict)")
         // ==========================================================
         // Stream open is a special tag for XMPP. Stanzas are child
         // of the root stream open.

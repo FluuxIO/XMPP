@@ -31,8 +31,8 @@ import UIKit
 //       XMPPEventDelegate (user of our app). It holds a weak reference to our XMPP
 //       client instance that is used to keep track of the current session state and
 //       pass back information to the XMPPEventDelegate
-//  3. SAXParser instance: The SAXParser will receive the raw data coming from the network and
-//       feed them to libxml2 event parser (SAX). It relies on our SAXDelegate to process
+//  3. Parser instance: The Parser will receive the raw data coming from the network and
+//       feed them to libxml2 event parser (SAX). It relies on our ParserDelegate to process
 //       SAX XML events.
 // On disconnect, all the previously created instances are destroy. They will be recreated on
 // reconnect.

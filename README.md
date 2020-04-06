@@ -11,9 +11,6 @@ Fluux XMPP is a clean slate implementation, with the following goals in mind:
 
 As a result, on iOS, we target iOS version 12+. On MacOS, we focus on Mojave and up (10.14+). On Linux, we use BSD Socket with SwiftNIO, so it should work quite broadly, as long as you have Swift 5.0+ installed.
 
-*Note*: At the moment, the lib cannot be  build for Linux, as I could not find a way to use libxml2 as provided by the local SDK for Apple
-platform and use the Linux system version on Linux.
-
 *Note*: This library is under very active development and not yet ready for production.
 
 ## Building Fluux XMPP library
@@ -102,7 +99,7 @@ _ = semaphore.wait(timeout: DispatchTime.distantFuture)
 To build the project, you can just use the standard build command:
 
 ```bash
-swift build -Xcc -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/libxml2
+swift build
 ```
 
 You can then run your console client:
@@ -114,7 +111,7 @@ You can then run your console client:
 The tests can be run with the command:
 
 ```bash
-swift test"
+swift test
 ```
 
 ### Working on Linux with Docker
@@ -144,7 +141,17 @@ apt-get install libxml2-dev libssl-dev
 From the Docker shell, you can build the code with:
 
 ```
+swift build
+```
+
+<!--
 swift build -Xcc -I/usr/include/libxml2
+-->
+
+To run the test on Linux, you need to explicitely enable test discovery (See [Swift Test Discovery](https://oleb.net/2020/swift-test-discovery/)):
+
+```
+swift test --enable-test-discovery
 ```
 
 ## TLS support
