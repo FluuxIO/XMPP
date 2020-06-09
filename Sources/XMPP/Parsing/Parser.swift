@@ -112,7 +112,7 @@ final class SAXDelegate: NSObject, XMLParserDelegate {
     }
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        print("Endelement: \(elementName) \(namespaceURI) \(qName)")
+        print("Endelement: \(elementName) \(String(describing: namespaceURI)) \(String(describing: qName))")
         
         parsingState.level -= 1
         if let n = parsingState.currentNode {
