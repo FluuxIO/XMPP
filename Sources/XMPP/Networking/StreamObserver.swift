@@ -3,7 +3,7 @@
 //  XMPP
 //
 //  Created by Mickaël Rémond on 2018-11-18.
-//  Copyright © 2018-2019 ProcessOne. All rights reserved.
+//  Copyright © 2018-2020 ProcessOne. All rights reserved.
 //
 
 public enum StreamEvent {

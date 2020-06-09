@@ -3,7 +3,7 @@
 //  XMPP
 //
 //  Created by Mickaël Rémond on 2018-10-21.
-//  Copyright © 2018-2019 ProcessOne. All rights reserved.
+//  Copyright © 2018-2020 ProcessOne. All rights reserved.
 //
 
 // TODO: Generate message id and threadID
